@@ -39,6 +39,101 @@
     * {
         font-family: 'Poppins', sans-serif !important;
     }
+
+    #flota .flota-card {
+        position: relative;
+        display: block;
+        height: 320px;
+        overflow: hidden;
+    }
+
+    #flota .flota-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #flota .flota-card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        text-align: center;
+        background: rgba(0, 0, 0, .45);
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    #flota .flota-card:hover .flota-card-overlay,
+    #flota .flota-card:focus .flota-card-overlay {
+        opacity: 1;
+    }
+
+    #flota .flota-card-overlay h4,
+    #flota .flota-card-overlay p {
+        color: #fff;
+    }
+
+    @media (max-width: 767px) {
+        #flota .flota-card {
+            height: 260px;
+        }
+    }
+
+    #contacto .contact-section {
+        position: relative;
+        background: url('img/1920x1080/02.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    #contacto .contact-section:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .65);
+        content: " ";
+    }
+
+    #contacto .contact-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    #contacto .contact-title,
+    #contacto .contact-label {
+        color: #fff;
+    }
+
+    #contacto .contact-text,
+    #contacto .contact-input {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    #contacto .contact-input {
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid rgba(255, 255, 255, .7);
+        background: transparent;
+        padding: 10px 0;
+        margin-bottom: 30px;
+        outline: 0;
+    }
+
+    #contacto .contact-input::placeholder {
+        color: rgba(255, 255, 255, .65);
+    }
+
+    #contacto textarea.contact-input {
+        min-height: 110px;
+        resize: vertical;
+    }
 </style>
     </head>
     <!-- END HEAD -->
@@ -105,16 +200,9 @@
         <!-- Nosotros -->
         <div id="nosotros">
             <div class="container content-lg">
-                <div class="row text-center margin-b-40">
-                    <div class="col-sm-6 col-sm-offset-3">
-                        <h2>Nosotros</h2>
-                        <p>Texto aquí.</p>
-                    </div>
-                </div>
-                <!--// end row -->
-
                 <div class="row margin-b-50">
                     <div class="col-sm-6 sm-margin-b-50">
+                        <h2>Nosotros</h2>
                         <h3>Título aquí</h3>
                         <p>Texto aquí.</p>
                         <p>Texto aquí.</p>
@@ -146,128 +234,66 @@
                     </div>
                 </div>
                 <!--// end row -->
-
-                <div class="row">
-                    <div class="col-sm-6 sm-margin-b-50">
-                        <h3>Misión</h3>
-                        <p>Texto aquí.</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <h3>Visión</h3>
-                        <p>Texto aquí.</p>
-                    </div>
-                </div>
-                <!--// end row -->
             </div>
         </div>
         <!-- End Nosotros -->
 
         <!-- Nuestra flota -->
         <div id="flota">
-            <div class="bg-color-sky-light" data-auto-height="true">
+            <div class="bg-color-sky-light">
                 <div class="content-lg container">
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Nuestra flota</h2>
-                            <p>Descripción aquí.</p>
-                        </div>
-                    </div>
-                    <!--// end row -->
-
-                    <div class="row row-space-2 margin-b-4">
-                        <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service" data-height="height">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/01.jpg" alt="Imagen pendiente">
-                                </div>
-                                <div class="service-element">
-                                    <i class="service-icon icon-chemistry"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Título aquí</h3>
-                                    <p class="margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service bg-color-base wow fadeInDown" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/02.jpg" alt="Imagen pendiente">
-                                </div>
-                                <div class="service-element">
-                                    <i class="service-icon color-white icon-screen-tablet"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3 class="color-white">Título aquí</h3>
-                                    <p class="color-white margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="service" data-height="height">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/03.jpg" alt="Imagen pendiente">
-                                </div>
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Título aquí</h3>
-                                    <p class="margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
+                            <p>Texto aquí.</p>
                         </div>
                     </div>
                     <!--// end row -->
 
                     <div class="row row-space-2">
-                        <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service" data-height="height">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/01.jpg" alt="Imagen pendiente">
+                        <div class="col-sm-3 sm-margin-b-4">
+                            <a class="flota-card" href="#">
+                                <img src="img/970x647/01.jpg" alt="Imagen pendiente">
+                                <div class="flota-card-overlay">
+                                    <div>
+                                        <h4>Título aquí</h4>
+                                        <p>Descripción aquí.</p>
+                                    </div>
                                 </div>
-                                <div class="service-element">
-                                    <i class="service-icon icon-notebook"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Título aquí</h3>
-                                    <p class="margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-sm-4 sm-margin-b-4">
-                            <div class="service" data-height="height">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/02.jpg" alt="Imagen pendiente">
+                        <div class="col-sm-3 sm-margin-b-4">
+                            <a class="flota-card" href="#">
+                                <img src="img/970x647/02.jpg" alt="Imagen pendiente">
+                                <div class="flota-card-overlay">
+                                    <div>
+                                        <h4>Título aquí</h4>
+                                        <p>Descripción aquí.</p>
+                                    </div>
                                 </div>
-                                <div class="service-element">
-                                    <i class="service-icon icon-speedometer"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h3>Título aquí</h3>
-                                    <p class="margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
+                            </a>
                         </div>
-                        <div class="col-sm-4">
-                            <div class="service" data-height="height">
-                                <div class="margin-b-20">
-                                    <img class="img-responsive" src="img/970x647/03.jpg" alt="Imagen pendiente">
+                        <div class="col-sm-3 sm-margin-b-4">
+                            <a class="flota-card" href="#">
+                                <img src="img/970x647/03.jpg" alt="Imagen pendiente">
+                                <div class="flota-card-overlay">
+                                    <div>
+                                        <h4>Título aquí</h4>
+                                        <p>Descripción aquí.</p>
+                                    </div>
                                 </div>
-                                <div class="service-element">
-                                    <i class="service-icon icon-badge"></i>
+                            </a>
+                        </div>
+                        <div class="col-sm-3">
+                            <a class="flota-card" href="#">
+                                <img src="img/800x400/01.jpg" alt="Imagen pendiente">
+                                <div class="flota-card-overlay">
+                                    <div>
+                                        <h4>Título aquí</h4>
+                                        <p>Descripción aquí.</p>
+                                    </div>
                                 </div>
-                                <div class="service-info">
-                                    <h3>Título aquí</h3>
-                                    <p class="margin-b-5">Descripción aquí.</p>
-                                </div>
-                                <a href="#" class="content-wrapper-link"></a>    
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <!--// end row -->
@@ -290,40 +316,51 @@
             <div class="content-md container">
                 <div class="row text-center margin-b-40">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2>Servicios</h2>
-                        <p>Descripción aquí.</p>
+                        <h2>Nuestros servicios</h2>
+                    </div>
+                </div>
+                <!--// end row -->
+
+                <div class="row margin-b-50">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <p>Texto aquí.</p>
+                        <p>Texto aquí.</p>
                     </div>
                 </div>
                 <!--// end row -->
 
                 <div class="row">
-                    <div class="col-sm-6 margin-b-50">
+                    <div class="col-sm-3 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="img/970x647/01.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
+                        <a class="link" href="#">Ver más</a>
                     </div>
-                    <div class="col-sm-6 margin-b-50">
+                    <div class="col-sm-3 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="img/970x647/02.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
+                        <a class="link" href="#">Ver más</a>
                     </div>
-                    <div class="col-sm-6 sm-margin-b-50">
+                    <div class="col-sm-3 sm-margin-b-50">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="img/970x647/03.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
+                        <a class="link" href="#">Ver más</a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-3">
                         <div class="margin-b-20">
                             <img class="img-responsive" src="img/800x400/01.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
+                        <a class="link" href="#">Ver más</a>
                     </div>
                 </div>
                 <!--// end row -->
@@ -338,7 +375,7 @@
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Novedades</h2>
-                            <p>Descripción aquí.</p>
+                            <p>Texto breve aquí.</p>
                         </div>
                     </div>
                     <!--// end row -->
@@ -351,24 +388,24 @@
                                     <img class="img-responsive" src="img/397x300/01.jpg" alt="Imagen pendiente">
                                 </div>
                                 <div class="margin-b-30">
-                                    <h3>Título aquí</h3>
+                                    <h4>Título aquí</h4>
                                     <p>Descripción aquí.</p>
                                 </div>
-                                <a href="#" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Ver noticia</a>
+                                <a class="link" href="#">Ver noticia</a>
                             </div>
                             <!-- End Novedad -->
                         </div>
                         <div class="col-sm-4 sm-margin-b-4">
                             <!-- Novedad -->
-                            <div class="pricing pricing-active">
+                            <div class="pricing">
                                 <div class="margin-b-20">
                                     <img class="img-responsive" src="img/397x300/02.jpg" alt="Imagen pendiente">
                                 </div>
                                 <div class="margin-b-30">
-                                    <h3>Título aquí</h3>
+                                    <h4>Título aquí</h4>
                                     <p>Descripción aquí.</p>
                                 </div>
-                                <a href="#" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Ver noticia</a>
+                                <a class="link" href="#">Ver noticia</a>
                             </div>
                             <!-- End Novedad -->
                         </div>
@@ -379,10 +416,10 @@
                                     <img class="img-responsive" src="img/397x300/03.jpg" alt="Imagen pendiente">
                                 </div>
                                 <div class="margin-b-30">
-                                    <h3>Título aquí</h3>
+                                    <h4>Título aquí</h4>
                                     <p>Descripción aquí.</p>
                                 </div>
-                                <a href="#" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Ver noticia</a>
+                                <a class="link" href="#">Ver noticia</a>
                             </div>
                             <!-- End Novedad -->
                         </div>
@@ -395,14 +432,45 @@
             
         <!-- Contacto -->
         <div id="contacto">
-            <!-- Google Map -->
-            <div class="gmap">
-                <div id="map" class="map height-400"></div>
-                <address class="gmap-address">
-                    <p class="color-heading margin-b-0">Datos de contacto pendientes.</p>
-                </address>
+            <div class="contact-section">
+                <div class="contact-content content-lg container">
+                    <div class="row">
+                        <div class="col-sm-4 sm-margin-b-50">
+                            <div class="margin-b-40">
+                                <h3 class="contact-label">Teléfono / WhatsApp</h3>
+                                <p class="contact-text">Texto aquí.</p>
+                            </div>
+                            <div class="margin-b-40">
+                                <h3 class="contact-label">Dirección</h3>
+                                <p class="contact-text">Texto aquí.</p>
+                            </div>
+                            <div>
+                                <h3 class="contact-label">Email</h3>
+                                <p class="contact-text">Texto aquí.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <h2 class="contact-title">Contáctanos</h2>
+                            <form action="#" method="post">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <input class="contact-input" type="text" name="nombre" placeholder="Nombre">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input class="contact-input" type="email" name="email" placeholder="Email">
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input class="contact-input" type="text" name="asunto" placeholder="Asunto">
+                                    </div>
+                                </div>
+                                <textarea class="contact-input" name="mensaje" placeholder="Mensaje"></textarea>
+                                <button class="btn-theme btn-theme-sm btn-default-bg text-uppercase" type="submit">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
             </div>
-            <!-- End Google Map -->
         </div>
         <!-- End Contacto -->
         <!--========== END PAGE LAYOUT ==========-->
@@ -482,7 +550,6 @@
         <script src="vendor/magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
         <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
         <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U&amp;callback=initMap" async defer></script>
 
         <!-- PAGE LEVEL SCRIPTS -->
         <script src="js/layout.min.js" type="text/javascript"></script>
@@ -490,7 +557,6 @@
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/maginific-popup.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>
-        <script src="js/components/gmap.min.js" type="text/javascript"></script>
 
     </body>
     <!-- END BODY -->
