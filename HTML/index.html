@@ -40,6 +40,62 @@
         font-family: 'Poppins', sans-serif !important;
     }
 
+    #inicio {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #inicio:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: rgba(81, 87, 105, .4);
+        content: " ";
+    }
+
+    #inicio .inicio-slider,
+    #inicio .swiper-wrapper,
+    #inicio .swiper-slide {
+        height: 100%;
+    }
+
+    #inicio .inicio-slide {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 0;
+    }
+
+    #inicio .inicio-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #inicio .promo-block-title,
+    #inicio .promo-block-text {
+        color: #fff;
+    }
+
+    #inicio .promo-block-title {
+        text-transform: uppercase;
+    }
+
+    #inicio .btn-theme {
+        border-radius: 6px;
+    }
+
     #nosotros .about-image {
         overflow: hidden;
     }
@@ -203,22 +259,21 @@
         <!--========== END HEADER ==========-->
 
         <!--========== SLIDER ==========-->
-        <div class="swiper-slider swiper-container" style="height: 100vh;">
-    <div class="swiper-wrapper" style="height: 100%;">
-        
-        <div class="swiper-slide promo-block" style="height: 100vh; padding: 0; background: url('img/02.png') no-repeat center center; background-size: cover;">
-            <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: center;">
-                <div>
-                    <h1 class="promo-block-title">Título principal aquí</h1>
-                    <p class="promo-block-text margin-b-40">Subtítulo aquí</p>
+        <div id="inicio" class="swiper-slider swiper-container inicio-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide promo-block inicio-slide" style="background-image: url('img/02.png');"></div>
+                <div class="swiper-slide promo-block inicio-slide" style="background-image: url('img/inicio_01.png');"></div>
+                <div class="swiper-slide promo-block inicio-slide" style="background-image: url('img/inicio_02.png');"></div>
+            </div>
+            <div class="inicio-content">
+                <div class="container">
+                    <h1 class="promo-block-title">Especialistas en las condiciones más agresivas y de alta montaña</h1>
+                    <p class="promo-block-text margin-b-40">Líderes en transporte minero en Chile, ofrecemos soluciones seguras, puntuales y sostenibles mediante estándares de excelencia y una flota moderna.</p>
                     <a href="#nosotros" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Nosotros</a>
                     <a href="#contacto" class="btn-theme btn-theme-sm btn-white-bg text-uppercase margin-l-20">Contacto</a>
                 </div>
             </div>
         </div>
-
-    </div>
-</div>
         <!--========== SLIDER ==========-->
 
         <!--========== PAGE LAYOUT ==========-->
@@ -229,7 +284,6 @@
                     <div class="col-sm-5 sm-margin-b-50">
                         <h2>Nosotros</h2>
                         <h3>Título aquí</h3>
-                        <p>Texto aquí.</p>
                         <p>Texto aquí.</p>
                     </div>
                     <div class="col-sm-7">
@@ -261,6 +315,7 @@
                     <div class="col-sm-5">
                         <h3>Título aquí</h3>
                         <p>Texto aquí.</p>
+                        <h3>Título aquí</h3>
                         <p>Texto aquí.</p>
                     </div>
                 </div>
@@ -355,7 +410,6 @@
                 <div class="row margin-b-50">
                     <div class="col-sm-10 col-sm-offset-1">
                         <p>Texto aquí.</p>
-                        <p>Texto aquí.</p>
                     </div>
                 </div>
                 <!--// end row -->
@@ -367,7 +421,6 @@
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
-                        <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
                         <div class="media-card-img margin-b-20">
@@ -375,7 +428,6 @@
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
-                        <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
                         <div class="media-card-img margin-b-20">
@@ -383,7 +435,6 @@
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
-                        <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3">
                         <div class="media-card-img margin-b-20">
@@ -391,7 +442,6 @@
                         </div>
                         <h4>Título aquí</h4>
                         <p>Descripción aquí.</p>
-                        <a class="link" href="#">Ver más</a>
                     </div>
                 </div>
                 <!--// end row -->
@@ -588,6 +638,17 @@
         <script src="js/components/swiper.min.js" type="text/javascript"></script>
         <script src="js/components/maginific-popup.min.js" type="text/javascript"></script>
         <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script>
+            $(window).load(function() {
+                new Swiper('#inicio', {
+                    speed: 700,
+                    autoplay: 3500,
+                    loop: true,
+                    effect: 'fade',
+                    simulateTouch: false
+                });
+            });
+        </script>
 
     </body>
     <!-- END BODY -->
