@@ -40,17 +40,42 @@
         font-family: 'Poppins', sans-serif !important;
     }
 
-    #flota .flota-card {
-        position: relative;
-        display: block;
-        height: 320px;
+    #nosotros .about-image {
         overflow: hidden;
     }
 
-    #flota .flota-card img {
+    #nosotros .about-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    #nosotros .about-image-vertical {
+        aspect-ratio: 4 / 3;
+    }
+
+    #nosotros .about-image-main {
+        aspect-ratio: 16 / 9;
+        max-width: 92%;
+    }
+
+    #flota .flota-card {
+        position: relative;
+        display: block;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+    }
+
+    #flota .flota-card img,
+    #servicios .media-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #servicios .media-card-img {
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
     }
 
     #flota .flota-card-overlay {
@@ -77,12 +102,6 @@
     #flota .flota-card-overlay h4,
     #flota .flota-card-overlay p {
         color: #fff;
-    }
-
-    @media (max-width: 767px) {
-        #flota .flota-card {
-            height: 260px;
-        }
     }
 
     #contacto .contact-section {
@@ -188,7 +207,13 @@
     <div class="swiper-wrapper" style="height: 100%;">
         
         <div class="swiper-slide promo-block" style="height: 100vh; padding: 0; background: url('img/02.png') no-repeat center center; background-size: cover;">
-            <div class="container">
+            <div class="container" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+                <div>
+                    <h1 class="promo-block-title">Título principal aquí</h1>
+                    <p class="promo-block-text margin-b-40">Subtítulo aquí</p>
+                    <a href="#nosotros" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Nosotros</a>
+                    <a href="#contacto" class="btn-theme btn-theme-sm btn-white-bg text-uppercase margin-l-20">Contacto</a>
+                </div>
             </div>
         </div>
 
@@ -201,20 +226,24 @@
         <div id="nosotros">
             <div class="container content-lg">
                 <div class="row margin-b-50">
-                    <div class="col-sm-6 sm-margin-b-50">
+                    <div class="col-sm-5 sm-margin-b-50">
                         <h2>Nosotros</h2>
                         <h3>Título aquí</h3>
                         <p>Texto aquí.</p>
                         <p>Texto aquí.</p>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-7">
                         <div class="row row-space-2">
                             <div class="col-xs-6">
-                                <img class="img-responsive wow fadeIn" src="img/397x400/01.jpg" alt="Imagen 1" data-wow-duration=".3" data-wow-delay=".1s">
+                                <div class="about-image about-image-vertical">
+                                    <img class="wow fadeIn" src="img/397x400/01.jpg" alt="Imagen 1" data-wow-duration=".3" data-wow-delay=".1s">
+                                </div>
                                 <h4>Imagen 1</h4>
                             </div>
                             <div class="col-xs-6">
-                                <img class="img-responsive wow fadeIn" src="img/397x400/01.jpg" alt="Imagen 2" data-wow-duration=".3" data-wow-delay=".2s">
+                                <div class="about-image about-image-vertical">
+                                    <img class="wow fadeIn" src="img/397x400/01.jpg" alt="Imagen 2" data-wow-duration=".3" data-wow-delay=".2s">
+                                </div>
                                 <h4>Imagen 2</h4>
                             </div>
                         </div>
@@ -224,7 +253,9 @@
 
                 <div class="row margin-b-50">
                     <div class="col-sm-7 sm-margin-b-50">
-                        <img class="img-responsive wow fadeIn" src="img/970x647/01.jpg" alt="Imagen principal" data-wow-duration=".3" data-wow-delay=".1s">
+                        <div class="about-image about-image-main">
+                            <img class="wow fadeIn" src="img/970x647/01.jpg" alt="Imagen principal" data-wow-duration=".3" data-wow-delay=".1s">
+                        </div>
                         <h4>Imagen principal</h4>
                     </div>
                     <div class="col-sm-5">
@@ -331,7 +362,7 @@
 
                 <div class="row">
                     <div class="col-sm-3 sm-margin-b-50">
-                        <div class="margin-b-20">
+                        <div class="media-card-img margin-b-20">
                             <img class="img-responsive" src="img/970x647/01.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
@@ -339,7 +370,7 @@
                         <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
-                        <div class="margin-b-20">
+                        <div class="media-card-img margin-b-20">
                             <img class="img-responsive" src="img/970x647/02.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
@@ -347,7 +378,7 @@
                         <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
-                        <div class="margin-b-20">
+                        <div class="media-card-img margin-b-20">
                             <img class="img-responsive" src="img/970x647/03.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
@@ -355,7 +386,7 @@
                         <a class="link" href="#">Ver más</a>
                     </div>
                     <div class="col-sm-3">
-                        <div class="margin-b-20">
+                        <div class="media-card-img margin-b-20">
                             <img class="img-responsive" src="img/800x400/01.jpg" alt="Imagen pendiente">
                         </div>
                         <h4>Título aquí</h4>
