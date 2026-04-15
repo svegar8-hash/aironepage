@@ -165,6 +165,18 @@
         padding: 0;
     }
 
+    #inicio .inicio-slide[style*="img/02.png"] {
+        background-position: center 58%;
+    }
+
+    #inicio .inicio-slide[style*="img/inicio_01.png"] {
+        background-position: center 62%;
+    }
+
+    #inicio .inicio-slide[style*="img/inicio_02.png"] {
+        background-position: center 60%;
+    }
+
     #inicio .inicio-content {
         position: absolute;
         top: 0;
@@ -214,13 +226,14 @@
         overflow: hidden;
         border-radius: 6px;
         background: #111;
-        box-shadow: 0 14px 36px rgba(0, 0, 0, .12);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .1);
     }
 
     #nosotros .about-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center 56%;
     }
 
     #nosotros .about-image-main {
@@ -230,7 +243,7 @@
     #nosotros .about-main-row {
         display: flex;
         align-items: center;
-        margin-bottom: 74px;
+        margin-bottom: 68px;
     }
 
     #nosotros .about-main-row:before,
@@ -244,44 +257,12 @@
         max-width: 540px;
     }
 
-    #nosotros .about-text h2,
-    #nosotros .about-secondary-row h2 {
-        margin-bottom: 22px;
-        color: #222;
-    }
-
-    #nosotros .about-text p,
-    #nosotros .about-secondary-row p {
-        max-width: 560px;
-        margin-bottom: 18px;
-        color: #6f7480;
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    #nosotros .about-text p:last-child,
-    #nosotros .about-secondary-row p:last-child {
-        margin-bottom: 0;
-    }
-
     #nosotros .about-main-row .about-image {
         width: 100%;
     }
 
     #nosotros .about-secondary-row {
         display: flex;
-        align-items: flex-start;
-        margin-bottom: 0;
-        padding-top: 48px;
-        border-top: 1px solid rgba(81, 87, 105, .14);
-    }
-
-    #nosotros .about-secondary-row .col-sm-6:first-child {
-        padding-right: 42px;
-    }
-
-    #nosotros .about-secondary-row .col-sm-6:last-child {
-        padding-left: 42px;
     }
 
     @media (max-width: 767px) {
@@ -290,22 +271,8 @@
             display: block;
         }
 
-        #nosotros .about-main-row {
-            margin-bottom: 52px;
-        }
-
         #nosotros .about-text {
             max-width: 100%;
-        }
-
-        #nosotros .about-secondary-row {
-            padding-top: 38px;
-        }
-
-        #nosotros .about-secondary-row .col-sm-6:first-child,
-        #nosotros .about-secondary-row .col-sm-6:last-child {
-            padding-left: 15px;
-            padding-right: 15px;
         }
     }
 
@@ -325,10 +292,24 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center center;
     }
 
     #flota .flota-card img {
         transition: transform .45s ease, filter .45s ease;
+    }
+
+    #flota .flota-card img[src*="bus_nieve_01.png"] {
+        object-position: center 62%;
+    }
+
+    #flota .flota-card img[src*="minibuses_01.png"] {
+        object-position: center 64%;
+    }
+
+    .promo-banner {
+        background-position: center 58%;
+        background-size: cover;
     }
 
     #servicios .media-card-img {
@@ -349,6 +330,22 @@
 
     #servicios .media-card-img img {
         transition: transform .45s ease, filter .45s ease;
+    }
+
+    #servicios .media-card-img img[src*="indus_min_01.png"] {
+        object-position: center 56%;
+    }
+
+    #servicios .media-card-img img[src*="mina_01.png"] {
+        object-position: center 58%;
+    }
+
+    #servicios .media-card-img img[src*="acercamiento_01.png"] {
+        object-position: center 52%;
+    }
+
+    #servicios .media-card-img img[src*="regiones_01.png"] {
+        object-position: center 57%;
     }
 
     #servicios .col-sm-3:hover {
@@ -493,6 +490,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center center;
         transition: transform .45s ease, filter .45s ease;
     }
 
@@ -543,6 +541,7 @@
         position: relative;
         background: url('img/1920x1080/02.jpg') no-repeat center center;
         background-size: cover;
+        background-position: center 58%;
     }
 
     #contacto .contact-section:before {
@@ -670,21 +669,24 @@ las necesidades de nuestros clientes.</p>
                     </div>
                     <div class="col-sm-6">
                         <div class="about-image about-image-main">
-                            <img class="wow fadeIn" src="img/970x647/01.jpg" alt="Imagen principal" data-wow-duration=".3" data-wow-delay=".1s">
+                            <img class="wow fadeIn" src="img/nosotros_01.png" alt="Imagen principal" data-wow-duration=".3" data-wow-delay=".1s">
                         </div>
                     </div>
                 </div>
                 <!--// end row -->
 
-                <div class="row margin-b-50 about-secondary-row">
+                <div class="row margin-b-50 about-main-row">
                     <div class="col-sm-6 sm-margin-b-50">
-                        <h2>Misión</h2>
-                        <p>Brindar soluciones de transporte de personas para la industria minera, garantizando servicios seguros, puntuales y eficientes, a través de un equipo humano comprometido, procesos operacionales de alto estándar y una flota moderna de buses y furgones, contribuyendo a la continuidad operativa, el bienestar de las personas y la sostenibilidad de nuestros clientes.</p>
+                        <div class="about-image about-image-main">
+                            <img class="wow fadeIn" src="img/electro_01.png" alt="Imagen principal" data-wow-duration=".3" data-wow-delay=".1s">
+                        </div>
                     </div>
                     <div class="col-sm-6">
-                        <h2>Visión</h2>
-                        <p>Ser la mejor empresa de transporte de pasajeros para la industria minera en Chile, que sea reconocida por su
-electromovilidad y excelencia operacional, entregando un servicio de calidad que cuide la vida de las personas, que promueve el respeto y la confianza en cada viaje y que logre aportar innovación a la sociedad.</p>
+                        <div class="about-text">
+                            <h2>Electromovilidad</h2>
+                            <p>Desarrollamos la electromovilidad en la industria minera junto a nuestros clientes.</p>
+                            <p>Tenemos la única electrolinera privada en el Valle del Aconcagua con una capacidad de carga de 600 Kw.</p>
+                        </div>
                     </div>
                 </div>
                 <!--// end row -->
@@ -757,7 +759,7 @@ electromovilidad y excelencia operacional, entregando un servicio de calidad que
         <!-- End Nuestra flota -->
 
         <!-- Promo Banner -->
-        <div class="promo-banner">
+        <div class="promo-banner" style="background-image: url('img/electro_01.png');">
             <div class="container-sm content-lg">
                 <h2 class="promo-banner-title">Consorcio Andino</h2>
                 <p class="promo-banner-text">Texto destacado pendiente.</p>
@@ -785,28 +787,28 @@ electromovilidad y excelencia operacional, entregando un servicio de calidad que
                 <div class="row">
                     <div class="col-sm-3 sm-margin-b-50">
                         <div class="media-card-img margin-b-20">
-                            <img class="img-responsive" src="img/970x647/01.jpg" alt="Imagen pendiente">
+                            <img class="img-responsive" src="img/indus_min_01.png" alt="Imagen pendiente">
                         </div>
                         <h4>Industrial Minero</h4>
                         <p>Descripción aquí.</p>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
                         <div class="media-card-img margin-b-20">
-                            <img class="img-responsive" src="img/970x647/02.jpg" alt="Imagen pendiente">
+                            <img class="img-responsive" src="img/mina_01.png" alt="Imagen pendiente">
                         </div>
                         <h4>Interno Mina</h4>
                         <p>Descripción aquí.</p>
                     </div>
                     <div class="col-sm-3 sm-margin-b-50">
                         <div class="media-card-img margin-b-20">
-                            <img class="img-responsive" src="img/970x647/03.jpg" alt="Imagen pendiente">
+                            <img class="img-responsive" src="img/acercamiento_01.png" alt="Imagen pendiente">
                         </div>
                         <h4>Servicios de acercamiento</h4>
                         <p>Descripción aquí.</p>
                     </div>
                     <div class="col-sm-3">
                         <div class="media-card-img margin-b-20">
-                            <img class="img-responsive" src="img/800x400/01.jpg" alt="Imagen pendiente">
+                            <img class="img-responsive" src="img/regiones_01.png" alt="Imagen pendiente">
                         </div>
                         <h4>Charter entre regiones</h4>
                         <p>Descripción aquí.</p>
@@ -881,7 +883,7 @@ electromovilidad y excelencia operacional, entregando un servicio de calidad que
             
         <!-- Contacto -->
         <div id="contacto">
-            <div class="contact-section">
+            <div class="contact-section" style="background-image: url('img/contacto_01.png');">
                 <div class="contact-content content-lg container">
                     <div class="row">
                         <div class="col-sm-4 sm-margin-b-50">
