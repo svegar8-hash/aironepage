@@ -135,6 +135,71 @@
         background: #fc0202 !important;
     }
 
+    .page-on-scroll .header {
+        box-shadow: 0 8px 26px rgba(0, 0, 0, .08);
+    }
+
+    .btn-theme {
+        border-radius: 6px;
+        font-weight: 600;
+        letter-spacing: .04em;
+        transition: background .25s ease, color .25s ease, box-shadow .25s ease, transform .25s ease;
+    }
+
+    .btn-theme:hover,
+    .btn-theme:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, .14);
+    }
+
+    .link {
+        font-weight: 600;
+        letter-spacing: .03em;
+    }
+
+    #nosotros .content-lg,
+    #flota .content-lg,
+    #novedades .content-lg,
+    #contacto .contact-content {
+        padding-top: 104px;
+        padding-bottom: 104px;
+    }
+
+    #servicios .content-md {
+        padding-top: 104px;
+        padding-bottom: 104px;
+    }
+
+    #flota .text-center p,
+    #servicios .margin-b-50 p,
+    #novedades .text-center p {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #6f7480;
+        line-height: 1.8;
+    }
+
+    #flota h2,
+    #servicios h2,
+    #novedades h2,
+    #contacto .contact-title {
+        margin-bottom: 18px;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    @media (max-width: 767px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+    }
+
     #inicio {
         height: 100vh;
         position: relative;
@@ -255,6 +320,24 @@
 
     #nosotros .about-text {
         max-width: 540px;
+    }
+
+    #nosotros .about-text h2 {
+        margin-bottom: 22px;
+        color: #222;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    #nosotros .about-text p {
+        margin-bottom: 18px;
+        color: #6f7480;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    #nosotros .about-text p:last-child {
+        margin-bottom: 0;
     }
 
     #nosotros .about-main-row .about-image {
@@ -559,9 +642,31 @@
         z-index: 1;
     }
 
+    #contacto .contact-content > .row {
+        display: flex;
+        align-items: center;
+    }
+
     #contacto .contact-title,
     #contacto .contact-label {
         color: #fff;
+    }
+
+    #contacto .contact-title {
+        margin-bottom: 30px;
+    }
+
+    #contacto .contact-label {
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: .04em;
+    }
+
+    #contacto .margin-b-40 {
+        margin-bottom: 34px;
+        padding-left: 18px;
+        border-left: 2px solid rgba(252, 2, 2, .7);
     }
 
     #contacto .contact-text,
@@ -569,14 +674,28 @@
         color: rgba(255, 255, 255, .75);
     }
 
+    #contacto form {
+        padding: 36px;
+        border: 1px solid rgba(255, 255, 255, .14);
+        border-radius: 6px;
+        background: rgba(255, 255, 255, .08);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, .18);
+    }
+
     #contacto .contact-input {
         width: 100%;
         border: 0;
-        border-bottom: 2px solid rgba(255, 255, 255, .7);
+        border-bottom: 1px solid rgba(255, 255, 255, .52);
         background: transparent;
         padding: 10px 0;
         margin-bottom: 30px;
         outline: 0;
+        transition: border-color .25s ease, color .25s ease;
+    }
+
+    #contacto .contact-input:focus {
+        border-color: #fc0202;
+        color: #fff;
     }
 
     #contacto .contact-input::placeholder {
@@ -586,6 +705,61 @@
     #contacto textarea.contact-input {
         min-height: 110px;
         resize: vertical;
+    }
+
+    #contacto .btn-theme {
+        min-width: 126px;
+    }
+
+    .footer {
+        border-top: 1px solid rgba(81, 87, 105, .12);
+    }
+
+    .footer .content-md {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .footer-list-item {
+        margin-bottom: 12px;
+    }
+
+    .footer-list-item a,
+    .footer .margin-b-0 {
+        color: #6f7480;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .footer-list-item a {
+        transition: color .25s ease;
+    }
+
+    .footer-list-item a:hover,
+    .footer-list-item a:focus,
+    .footer .margin-b-0 a:hover,
+    .footer .margin-b-0 a:focus {
+        color: #fc0202;
+    }
+
+    .footer .content {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+
+    @media (max-width: 767px) {
+        #contacto .contact-content > .row {
+            display: block;
+        }
+
+        #contacto form {
+            padding: 28px 24px;
+        }
+
+        .footer .content-md {
+            padding-top: 54px;
+            padding-bottom: 54px;
+        }
     }
 </style>
     </head>
@@ -759,7 +933,7 @@ las necesidades de nuestros clientes.</p>
         <!-- End Nuestra flota -->
 
         <!-- Promo Banner -->
-        <div class="promo-banner" style="background-image: url('img/electro_01.png');">
+        <div class="promo-banner" style="background-image: url('img/franja_01.png');">
             <div class="container-sm content-lg">
                 <h2 class="promo-banner-title">Consorcio Andino</h2>
                 <p class="promo-banner-text">Texto destacado pendiente.</p>
