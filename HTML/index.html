@@ -184,6 +184,7 @@
     #servicios h2,
     #novedades h2,
     #contacto .contact-title {
+        margin-top: 0;
         margin-bottom: 18px;
         font-weight: 600;
         line-height: 1.25;
@@ -262,6 +263,8 @@
 
     #inicio .promo-block-title {
         text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 18px;
     }
 
     #inicio .promo-block-text {
@@ -291,7 +294,7 @@
         overflow: hidden;
         border-radius: 6px;
         background: #111;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .1);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
     }
 
     #nosotros .about-image img {
@@ -323,7 +326,8 @@
     }
 
     #nosotros .about-text h2 {
-        margin-bottom: 22px;
+        margin-top: 0;
+        margin-bottom: 18px;
         color: #222;
         font-weight: 600;
         line-height: 1.25;
@@ -407,8 +411,16 @@
     #servicios .media-card-img {
         border-radius: 6px;
         background: #111;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .1);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
         transition: box-shadow .35s ease;
+    }
+
+    #servicios > .content-md > .row.text-center.margin-b-40 {
+        margin-bottom: 18px !important;
+    }
+
+    #servicios > .content-md > .row.margin-b-50 {
+        margin-bottom: 40px !important;
     }
 
     #servicios .media-card-img img {
@@ -497,7 +509,7 @@
     #flota .flota-card:hover,
     #flota .flota-card:focus {
         transform: translateY(-4px);
-        box-shadow: 0 18px 42px rgba(0, 0, 0, .2);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
     }
 
     #flota .flota-card:hover img,
@@ -558,7 +570,7 @@
         overflow: hidden;
         border-radius: 6px;
         background: #fff;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .1);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
         transition: transform .35s ease, box-shadow .35s ease;
     }
 
@@ -653,7 +665,7 @@
     }
 
     #contacto .contact-title {
-        margin-bottom: 30px;
+        margin-bottom: 18px;
     }
 
     #contacto .contact-label {
@@ -679,7 +691,7 @@
         border: 1px solid rgba(255, 255, 255, .14);
         border-radius: 6px;
         background: rgba(255, 255, 255, .08);
-        box-shadow: 0 18px 42px rgba(0, 0, 0, .18);
+        box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
     }
 
     #contacto .contact-input {
