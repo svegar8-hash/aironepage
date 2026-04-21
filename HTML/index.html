@@ -96,6 +96,27 @@
         font-weight: 400;
     }
 
+    .header .nav-item:not(.nav-item-cta) .nav-item-child {
+        letter-spacing: .02em;
+    }
+
+    .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
+        top: auto;
+        bottom: 26px;
+        left: 50%;
+        width: calc(100% - 40px);
+        height: 1px;
+        opacity: 0;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center center;
+        transition: transform .32s ease, opacity .32s ease, background-color .3s ease;
+    }
+
+    .header .nav-item:not(.nav-item-cta):hover .nav-item-hover:after {
+        opacity: 1;
+        transform: translateX(-50%) scaleX(1);
+    }
+
     .header .logo-img {
         width: 132px;
         height: auto;
@@ -132,6 +153,24 @@
         }
     }
 
+    @media (max-width: 991px) {
+        .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
+            bottom: 17px;
+            left: 50%;
+            width: calc(100% - 27px);
+        }
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+        .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
+            height: 2px;
+        }
+
+        .header .nav-item:not(.nav-item-cta) .nav-item-child {
+            letter-spacing: .015em;
+        }
+    }
+
     .header:has(.nav-item.active .nav-item-child[href="#body"]) .nav-item-hover:after {
         background: #fc0202;
     }
@@ -161,25 +200,25 @@
         padding: 8px 16px;
         min-height: 36px;
         margin-top: 0;
-        border: 1px solid rgba(252, 2, 2, .24);
+        border: 1px solid rgba(252, 2, 2, .72);
         border-radius: 999px;
-        background: transparent;
-        color: #515769;
+        background: #fc0202;
+        color: #fff;
         font-size: 13px;
         font-weight: 600;
         letter-spacing: .03em;
         line-height: 1;
         text-decoration: none;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 12px 28px rgba(0, 0, 0, .16);
         transition: background-color .28s ease, border-color .28s ease, color .28s ease, box-shadow .28s ease, transform .28s ease;
     }
 
     .header .nav-item.nav-item-cta .btn-denuncias:hover,
     .header .nav-item.nav-item-cta .btn-denuncias:focus {
         border-color: rgba(252, 2, 2, .72);
-        background: rgba(252, 2, 2, .16);
-        color: #fc0202;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 10px 24px rgba(0, 0, 0, .12);
+        background: #fc0202;
+        color: #fff;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 12px 28px rgba(0, 0, 0, .16);
         transform: translateY(-1px);
         text-decoration: none;
     }
@@ -193,17 +232,18 @@
     }
 
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias {
-        color: #515769 !important;
-        border-color: rgba(252, 2, 2, .24) !important;
-        background: transparent !important;
+        color: #fff !important;
+        border-color: rgba(252, 2, 2, .72) !important;
+        background: #fc0202 !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 12px 28px rgba(0, 0, 0, .16);
     }
 
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:hover,
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:focus {
-        color: #fc0202 !important;
+        color: #fff !important;
         border-color: rgba(252, 2, 2, .72) !important;
-        background: rgba(252, 2, 2, .16) !important;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 10px 24px rgba(0, 0, 0, .12);
+        background: #fc0202 !important;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 12px 28px rgba(0, 0, 0, .16);
         transform: translateY(-1px);
     }
 
@@ -787,7 +827,7 @@
         bottom: 0;
         left: 0;
         display: block;
-        background: linear-gradient(90deg, rgba(10, 16, 24, .74), rgba(10, 16, 24, .48));
+        background: linear-gradient(90deg, rgba(10, 16, 24, .58), rgba(10, 16, 24, .26));
         content: " ";
     }
 
@@ -799,6 +839,11 @@
     #contacto .contact-content > .row {
         display: flex;
         align-items: center;
+        justify-content: center;
+    }
+
+    #contacto .col-sm-8 {
+        float: none;
     }
 
     #contacto .contact-title,
@@ -861,46 +906,69 @@
         max-width: 760px;
         margin: 0 auto;
         padding: 34px 30px;
-        border: 1px solid rgba(255, 255, 255, .18);
-        border-radius: 20px;
-        background: rgba(255, 255, 255, .14);
-        box-shadow: 0 24px 50px rgba(10, 16, 24, .22);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, .12);
+        border-radius: 22px;
+        background: rgba(255, 255, 255, .05);
+        box-shadow: 0 16px 34px rgba(10, 16, 24, .14);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
     }
 
     #contacto .contact-input {
         width: 100%;
-        border: 1px solid rgba(255, 255, 255, .36);
-        border-radius: 8px;
-        background: rgba(255, 255, 255, .9);
-        padding: 13px 18px;
-        margin-bottom: 14px;
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .42);
+        border-radius: 0;
+        background: transparent;
+        padding: 13px 0 12px;
+        margin-bottom: 22px;
         outline: 0;
-        color: #222;
-        transition: border-color .25s ease, background .25s ease, color .25s ease, box-shadow .25s ease;
+        color: #fff;
+        transition: border-color .28s ease, color .28s ease, box-shadow .28s ease;
     }
 
     #contacto .contact-input:focus {
         border-color: #fc0202;
-        background: #fff;
-        color: #222;
-        box-shadow: 0 0 0 3px rgba(252, 2, 2, .12);
+        color: #fff;
+        box-shadow: inset 0 -2px 0 rgba(252, 2, 2, .34), 0 10px 18px rgba(252, 2, 2, .06);
     }
 
     #contacto .contact-input::placeholder {
-        color: #6f7480;
+        color: rgba(255, 255, 255, .72);
+        transition: opacity .28s ease, color .28s ease;
+    }
+
+    #contacto .contact-input:focus::placeholder {
+        opacity: .5;
     }
 
     #contacto textarea.contact-input {
-        min-height: 110px;
+        min-height: 124px;
+        border: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .42);
+        border-radius: 0;
+        background: transparent;
+        padding: 14px 0 12px;
         resize: vertical;
+    }
+
+    #contacto textarea.contact-input:focus {
+        border-color: #fc0202;
+        box-shadow: inset 0 -2px 0 rgba(252, 2, 2, .34), 0 10px 18px rgba(252, 2, 2, .05);
     }
 
     #contacto .btn-theme {
         width: 100%;
         min-width: 126px;
         margin-top: 0;
+        box-shadow: 0 12px 24px rgba(252, 2, 2, .14);
+        transition: background-color .28s ease, border-color .28s ease, color .28s ease, box-shadow .28s ease, transform .28s ease;
+    }
+
+    #contacto .btn-theme:hover,
+    #contacto .btn-theme:focus {
+        box-shadow: 0 16px 30px rgba(252, 2, 2, .2);
+        transform: translateY(-1px);
     }
 
     .footer {
@@ -1029,9 +1097,9 @@
                     <div class="col-sm-6 sm-margin-b-50">
                         <div class="about-text">
                             <h2>Nosotros</h2>
-                            <p>Somos una empresa de transporte exclusiva para la industria minera en Chile, donde garantizamos un transporte seguro, eficiente y sustentable, integrando tecnología de alta gama que se adapta a
+                            <p>Somos una empresa de transporte exclusiva para la industria minera en Chile. Garantizamos un transporte seguro, eficiente y sustentable, integrando tecnología de alta gama que se adapta a
 las necesidades de nuestros clientes.</p>
-                            <p>Operamos en las rutas más exigentes del país y contamos con una flota moderna de más de 150 equipos, junto con un personal de trabajadores altamente capacitado para asegurar el bienestar de nuestros conductores y nuestros pasajeros en cada trayecto.</p>
+                            <p>Operamos en las rutas más exigentes del país y contamos con una flota moderna con más de 150 equipos, junto a trabajadores altamente capacitados para asegurar el bienestar de nuestros conductores y nuestros pasajeros en cada trayecto.</p>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -1051,8 +1119,11 @@ las necesidades de nuestros clientes.</p>
                     <div class="col-sm-6">
                         <div class="about-text">
                             <h2>Electromovilidad</h2>
-                            <p>Desarrollamos la electromovilidad en la industria minera junto a nuestros clientes.</p>
-                            <p>Tenemos la única electrolinera privada en el Valle del Aconcagua con una capacidad de carga de 600 Kw.</p>
+                            <p>Impulsando el transporte del futuro en la industria minera.</p>
+                            <p>En Consorcio Andino avanzamos en electromovilidad como parte de una estrategia concreta para reducir el impacto ambiental y optimizar la eficiencia operativa en entornos de alta exigencia.</p>
+                            <p>Contamos con infraestructura propia, incluyendo una electrolinera de hasta 600 kW en el Valle del Aconcagua, que permite sostener operaciones eléctricas en condiciones reales de faena.</p>
+                            <p>Este desarrollo nos posiciona en una transición activa hacia flotas más limpias, con el objetivo de avanzar hacia la paridad entre tecnología diésel y eléctrica en los próximos años.</p>
+                            <p>La electromovilidad no es solo innovación: es una forma más eficiente, responsable y sostenible de operar.</p>
                         </div>
                     </div>
                 </div>
@@ -1068,7 +1139,8 @@ las necesidades de nuestros clientes.</p>
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Nuestra flota</h2>
-                            <p>Texto aquí.</p>
+                            <p>Tecnología y rendimiento en cada trayecto.</p>
+                            <p>Más de 150 equipos preparados para operar en condiciones exigentes, integrando innovación y electromovilidad para una operación moderna, segura y sustentable.</p>
                         </div>
                     </div>
                     <!--// end row -->
@@ -1129,7 +1201,7 @@ las necesidades de nuestros clientes.</p>
         <div class="promo-banner" style="background-image: url('img/franja_01.png');">
             <div class="container-sm content-lg">
                 <h3 class="promo-banner-title">Consorcio Andino</h3>
-                <p class="promo-banner-text">Texto destacado pendiente.</p>
+                <p class="promo-banner-text">La seguridad es la base de nuestra operación.</p>
             </div>
         </div>
         <!-- End Promo Banner -->
@@ -1140,7 +1212,8 @@ las necesidades de nuestros clientes.</p>
                 <div class="row text-center margin-b-40">
                     <div class="col-sm-6 col-sm-offset-3">
                         <h2>Servicios</h2>
-                        <p>Servicio Industrial Minero.</p>
+                        <p>Transporte diseñado para la exigencia minera.</p>
+                        <p>Operamos en entornos de alta complejidad, entregando soluciones seguras, eficientes y confiables que aseguran la continuidad operacional en cada servicio.</p>
                     </div>
                 </div>
                 <!--// end row -->
@@ -1187,7 +1260,7 @@ las necesidades de nuestros clientes.</p>
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Novedades</h2>
-                            <p>Texto breve aquí.</p>
+                            <p>Novedades que impulsan nuestro desarrollo.</p>
                         </div>
                     </div>
                     <!--// end row -->
@@ -1247,23 +1320,9 @@ las necesidades de nuestros clientes.</p>
             <div class="contact-section">
                 <div class="contact-content content-lg container">
                     <div class="row">
-                        <div class="col-sm-4 sm-margin-b-50">
-                            <div class="margin-b-40">
-                                <h3 class="contact-label">Teléfono / WhatsApp</h3>
-                                <p class="contact-text">Texto aquí.</p>
-                            </div>
-                            <div class="margin-b-40">
-                                <h3 class="contact-label">Dirección</h3>
-                                <p class="contact-text">Texto aquí.</p>
-                            </div>
-                            <div>
-                                <h3 class="contact-label">Email</h3>
-                                <p class="contact-text">Texto aquí.</p>
-                            </div>
-                        </div>
                         <div class="col-sm-8">
                             <h2 class="contact-title">Contáctanos</h2>
-                            <form action="#" method="post">
+                            <form action="contact.php" method="post">
                                 <div class="row">
                                     <div class="col-sm-4">
                                         <input class="contact-input" type="text" name="nombre" placeholder="Nombre">
@@ -1384,3 +1443,4 @@ las necesidades de nuestros clientes.</p>
     </body>
     <!-- END BODY -->
 </html>
+
