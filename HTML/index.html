@@ -40,6 +40,20 @@
         font-size: 90%;
     }
 
+    @media (min-width: 1200px) {
+        body {
+            zoom: .7;
+            width: 142.857%;
+            position: relative;
+            left: -21.4285%;
+        }
+
+        #inicio {
+            height: 142.857vh;
+            min-height: 972px;
+        }
+    }
+
     * {
         font-family: 'Poppins', sans-serif !important;
     }
@@ -283,8 +297,8 @@
     #servicios .content-md,
     #novedades .content-lg,
     #contacto .contact-content {
-        padding-top: 92px;
-        padding-bottom: 92px;
+        padding-top: 80px;
+        padding-bottom: 80px;
     }
 
     #flota .text-center p,
@@ -294,9 +308,23 @@
         margin-left: auto;
         margin-right: auto;
         color: #6f7480;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 400;
-        line-height: 1.65;
+        line-height: 1.72;
+    }
+
+    #flota .row.text-center.margin-b-40 .col-sm-6.col-sm-offset-3,
+    #servicios .row.text-center.margin-b-40 .col-sm-6.col-sm-offset-3 {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #flota .row.text-center.margin-b-40 p,
+    #servicios .row.text-center.margin-b-40 p {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
     }
 
     #nosotros .about-text h2,
@@ -305,15 +333,15 @@
     #novedades h2,
     #contacto .contact-title {
         margin-top: 0;
-        margin-bottom: 18px;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.2;
+        margin-bottom: 16px;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.18;
     }
 
     @media (max-width: 767px) {
         html {
-            font-size: 95%;
+            font-size: 94%;
         }
 
         .header .nav-item.nav-item-cta {
@@ -334,13 +362,14 @@
         #servicios .content-md,
         #novedades .content-lg,
         #contacto .contact-content {
-            padding-top: 64px;
-            padding-bottom: 64px;
+            padding-top: 56px;
+            padding-bottom: 56px;
         }
     }
 
     #inicio {
-        height: 100vh;
+        height: 88vh;
+        min-height: 680px;
         position: relative;
         overflow: hidden;
     }
@@ -391,6 +420,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-top: 150px;
+        padding-bottom: 130px;
+        box-sizing: border-box;
         text-align: center;
     }
 
@@ -402,24 +434,26 @@
     #inicio .promo-block-title {
         text-transform: uppercase;
         margin-top: 0;
-        margin-bottom: 18px;
-        font-size: 50px;
+        margin-bottom: 16px;
+        font-size: 46px;
         font-weight: 700;
-        line-height: 1.14;
-        letter-spacing: 0;
+        line-height: 1.15;
+        letter-spacing: .5px;
     }
 
     #inicio .promo-block-text {
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 400;
-        max-width: 780px;
+        max-width: 680px;
         line-height: 1.6;
+        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
     }
 
     #inicio .btn-theme {
         border-radius: 6px;
+        margin-top: 30px;
     }
 
     #inicio .btn-theme-sm {
@@ -435,8 +469,13 @@
     }
 
     @media (max-width: 767px) {
+        #inicio .inicio-content {
+            padding-top: 116px;
+            padding-bottom: 96px;
+        }
+
         #inicio .promo-block-title {
-            font-size: 36px;
+            font-size: 32px;
             white-space: normal;
         }
 
@@ -449,7 +488,7 @@
         #servicios h2,
         #novedades h2,
         #contacto .contact-title {
-            font-size: 32px;
+            font-size: 28px;
         }
     }
 
@@ -490,19 +529,19 @@
 
     #nosotros .about-text h3 {
         margin-top: 0;
-        margin-bottom: 18px;
+        margin-bottom: 14px;
         color: #222;
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 1.25;
+        line-height: 1.3;
     }
 
     #nosotros .about-text p {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         color: #6f7480;
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.75;
+        line-height: 1.72;
     }
 
     #nosotros .about-text p:last-child {
@@ -565,7 +604,19 @@
     }
 
     .promo-banner:before {
-        background: linear-gradient(180deg, rgba(17, 20, 28, .52), rgba(17, 20, 28, .38));
+        background: linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .34));
+    }
+
+    .promo-banner .container-sm {
+        position: relative;
+        z-index: 1;
+    }
+
+    .promo-banner .promo-banner-title,
+    .promo-banner .promo-banner-text {
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
     }
 
     .promo-banner .promo-banner-text {
@@ -630,10 +681,10 @@
     }
 
     #servicios .media-card-img + h3 {
-        margin: 24px 0 10px;
-        font-size: 19px;
+        margin: 22px 0 10px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 1.3;
+        line-height: 1.32;
         letter-spacing: 0;
         white-space: nowrap;
         color: #222;
@@ -642,9 +693,9 @@
     #servicios .media-card-img + h3 + p {
         margin: 0;
         color: #6f7480;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.68;
     }
 
     @media (max-width: 767px) {
@@ -712,9 +763,9 @@
 
     #flota .flota-card-overlay h3 {
         margin: 0 0 8px;
-        font-size: 19px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 1.3;
+        line-height: 1.32;
         letter-spacing: 0;
         text-transform: uppercase;
     }
@@ -722,9 +773,9 @@
     #flota .flota-card-overlay p {
         margin: 0;
         color: rgba(255, 255, 255, .78);
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.68;
     }
 
     @media (hover: none) {
@@ -773,9 +824,9 @@
 
     #novedades .pricing h3 {
         margin: 0 0 10px;
-        font-size: 19px;
+        font-size: 20px;
         font-weight: 600;
-        line-height: 1.3;
+        line-height: 1.32;
         letter-spacing: 0;
         color: #222;
     }
@@ -783,9 +834,9 @@
     #novedades .pricing p {
         margin: 0;
         color: #6f7480;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.68;
     }
 
     #novedades .pricing .link {
@@ -839,11 +890,53 @@
     #contacto .contact-content > .row {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
+    #contacto .col-sm-4,
     #contacto .col-sm-8 {
-        float: none;
+        float: left;
+    }
+
+    #contacto .col-sm-4 {
+        padding-right: 34px;
+    }
+
+    #contacto .contact-info-copy {
+        max-width: 360px;
+    }
+
+    #contacto .contact-info-copy p {
+        margin: 0 0 18px;
+        color: rgba(255, 255, 255, .9);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.72;
+        text-shadow: 0 8px 22px rgba(0, 0, 0, .16);
+    }
+
+    #contacto .contact-info-copy p:last-of-type {
+        margin-bottom: 24px;
+    }
+
+    #contacto .contact-location {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        max-width: 360px;
+    }
+
+    #contacto .contact-location img {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+    }
+
+    #contacto .contact-location span {
+        color: rgba(255, 255, 255, .86);
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.6;
     }
 
     #contacto .contact-title,
@@ -1012,6 +1105,11 @@
             display: block;
         }
 
+        #contacto .col-sm-4 {
+            padding-right: 15px;
+            margin-bottom: 34px;
+        }
+
         #contacto form {
             padding: 24px 18px;
         }
@@ -1119,7 +1217,6 @@ las necesidades de nuestros clientes.</p>
                     <div class="col-sm-6">
                         <div class="about-text">
                             <h2>Electromovilidad</h2>
-                            <p>Impulsando el transporte del futuro en la industria minera.</p>
                             <p>En Consorcio Andino avanzamos en electromovilidad como parte de una estrategia concreta para reducir el impacto ambiental y optimizar la eficiencia operativa en entornos de alta exigencia.</p>
                             <p>Contamos con infraestructura propia, incluyendo una electrolinera de hasta 600 kW en el Valle del Aconcagua, que permite sostener operaciones eléctricas en condiciones reales de faena.</p>
                             <p>Este desarrollo nos posiciona en una transición activa hacia flotas más limpias, con el objetivo de avanzar hacia la paridad entre tecnología diésel y eléctrica en los próximos años.</p>
@@ -1139,7 +1236,6 @@ las necesidades de nuestros clientes.</p>
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Nuestra flota</h2>
-                            <p>Tecnología y rendimiento en cada trayecto.</p>
                             <p>Más de 150 equipos preparados para operar en condiciones exigentes, integrando innovación y electromovilidad para una operación moderna, segura y sustentable.</p>
                         </div>
                     </div>
@@ -1212,7 +1308,6 @@ las necesidades de nuestros clientes.</p>
                 <div class="row text-center margin-b-40">
                     <div class="col-sm-6 col-sm-offset-3">
                         <h2>Servicios</h2>
-                        <p>Transporte diseñado para la exigencia minera.</p>
                         <p>Operamos en entornos de alta complejidad, entregando soluciones seguras, eficientes y confiables que aseguran la continuidad operacional en cada servicio.</p>
                     </div>
                 </div>
@@ -1260,7 +1355,7 @@ las necesidades de nuestros clientes.</p>
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
                             <h2>Novedades</h2>
-                            <p>Novedades que impulsan nuestro desarrollo.</p>
+                            <p>Noticias que impulsan nuestro desarrollo.</p>
                         </div>
                     </div>
                     <!--// end row -->
@@ -1320,6 +1415,17 @@ las necesidades de nuestros clientes.</p>
             <div class="contact-section">
                 <div class="contact-content content-lg container">
                     <div class="row">
+                        <div class="col-sm-4 sm-margin-b-50">
+                            <div class="contact-info-copy">
+                                <p>¿Buscas un partner confiable en transporte minero?</p>
+                                <p>Contáctanos y conversemos cómo podemos aportar a una operación segura, eficiente y alineada a tus requerimientos.</p>
+                                <p>¡Respondemos a la brevedad para coordinar y dar continuidad a tu requerimiento!</p>
+                                <div class="contact-location">
+                                    <img src="img/lugar_01.png" alt="Ubicación">
+                                    <span>Avenida Argentina Oriente #17, Los Andes, Región de Valparaíso.</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-sm-8">
                             <h2 class="contact-title">Contáctanos</h2>
                             <form action="contact.php" method="post">
@@ -1443,4 +1549,5 @@ las necesidades de nuestros clientes.</p>
     </body>
     <!-- END BODY -->
 </html>
+
 
