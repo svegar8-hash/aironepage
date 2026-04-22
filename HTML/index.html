@@ -40,20 +40,6 @@
         font-size: 90%;
     }
 
-    @media (min-width: 1200px) {
-        body {
-            zoom: .7;
-            width: 142.857%;
-            position: relative;
-            left: -21.4285%;
-        }
-
-        #inicio {
-            height: 142.857vh;
-            min-height: 972px;
-        }
-    }
-
     * {
         font-family: 'Poppins', sans-serif !important;
     }
@@ -444,7 +430,7 @@
     #inicio .promo-block-text {
         font-size: 17px;
         font-weight: 400;
-        max-width: 680px;
+        max-width: 760px;
         line-height: 1.6;
         margin-top: 20px;
         margin-left: auto;
@@ -453,7 +439,7 @@
 
     #inicio .btn-theme {
         border-radius: 6px;
-        margin-top: 30px;
+        margin-top: -6px;
     }
 
     #inicio .btn-theme-sm {
@@ -539,7 +525,7 @@
     #nosotros .about-text p {
         margin-bottom: 18px;
         color: #6f7480;
-        font-size: 15px;
+        font-size: 17px;
         font-weight: 400;
         line-height: 1.72;
     }
@@ -554,6 +540,21 @@
 
     #nosotros .about-secondary-row {
         display: flex;
+    }
+
+    #nosotros .about-main-row:nth-of-type(2) {
+        align-items: flex-start;
+    }
+
+    #nosotros .about-main-row:nth-of-type(2) .about-text {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    #nosotros .about-main-row:nth-of-type(2) .about-text h2 {
+        margin-top: 0;
+        line-height: 1.12;
+        transform: translateY(-2px);
     }
 
     @media (max-width: 767px) {
@@ -640,6 +641,10 @@
     }
 
     #servicios > .content-md > .row.text-center.margin-b-40 {
+        margin-bottom: 18px !important;
+    }
+
+    #novedades > .bg-color-sky-light > .content-lg > .row.text-center.margin-b-40 {
         margin-bottom: 18px !important;
     }
 
@@ -903,40 +908,44 @@
     }
 
     #contacto .contact-info-copy {
-        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 390px;
     }
 
     #contacto .contact-info-copy p {
-        margin: 0 0 18px;
-        color: rgba(255, 255, 255, .9);
+        margin: 0 0 14px;
+        color: rgba(255, 255, 255, .88);
         font-size: 17px;
         font-weight: 400;
         line-height: 1.72;
-        text-shadow: 0 8px 22px rgba(0, 0, 0, .16);
+        text-shadow: 0 6px 18px rgba(0, 0, 0, .2);
     }
 
     #contacto .contact-info-copy p:last-of-type {
-        margin-bottom: 24px;
+        margin-bottom: 20px;
     }
 
     #contacto .contact-location {
         display: flex;
-        align-items: center;
-        gap: 14px;
-        max-width: 360px;
+        align-items: flex-start;
+        gap: 12px;
+        max-width: 390px;
     }
 
     #contacto .contact-location img {
-        width: 22px;
-        height: 22px;
-        flex: 0 0 22px;
+        width: 20px;
+        height: 20px;
+        flex: 0 0 20px;
+        margin-top: 2px;
     }
 
     #contacto .contact-location span {
-        color: rgba(255, 255, 255, .86);
-        font-size: 15px;
+        color: rgba(255, 255, 255, .82);
+        font-size: 14px;
         font-weight: 500;
-        line-height: 1.6;
+        line-height: 1.55;
     }
 
     #contacto .contact-title,
@@ -958,9 +967,9 @@
     #contacto .contact-title {
         position: relative;
         color: #fff;
-        margin-bottom: 18px;
-        padding-bottom: 18px;
-        text-shadow: 0 10px 24px rgba(0, 0, 0, .18);
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        text-shadow: 0 10px 24px rgba(0, 0, 0, .2);
     }
 
     #contacto .contact-title:after {
@@ -971,6 +980,17 @@
         height: 3px;
         background: #fc0202;
         content: " ";
+    }
+
+    #contacto .contact-info-copy .contact-title {
+        display: inline-block;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    #contacto .contact-info-copy .contact-title:after {
+        left: 0;
+        width: 54px;
     }
 
     #contacto .contact-label {
@@ -1217,10 +1237,8 @@ las necesidades de nuestros clientes.</p>
                     <div class="col-sm-6">
                         <div class="about-text">
                             <h2>Electromovilidad</h2>
-                            <p>En Consorcio Andino avanzamos en electromovilidad como parte de una estrategia concreta para reducir el impacto ambiental y optimizar la eficiencia operativa en entornos de alta exigencia.</p>
+                            <p>Avanzamos en electromovilidad como parte de una estrategia concreta para reducir el impacto ambiental y optimizar la eficiencia operativa en entornos de alta exigencia.</p>
                             <p>Contamos con infraestructura propia, incluyendo una electrolinera de hasta 600 kW en el Valle del Aconcagua, que permite sostener operaciones eléctricas en condiciones reales de faena.</p>
-                            <p>Este desarrollo nos posiciona en una transición activa hacia flotas más limpias, con el objetivo de avanzar hacia la paridad entre tecnología diésel y eléctrica en los próximos años.</p>
-                            <p>La electromovilidad no es solo innovación: es una forma más eficiente, responsable y sostenible de operar.</p>
                         </div>
                     </div>
                 </div>
@@ -1242,7 +1260,7 @@ las necesidades de nuestros clientes.</p>
                     <!--// end row -->
 
                     <div class="row row-space-2">
-                        <div class="col-sm-3 sm-margin-b-4">
+                        <div class="col-sm-6 sm-margin-b-4">
                             <a class="flota-card" href="#">
                                 <img src="img/bus_nieve_01.png" alt="Imagen pendiente">
                                 <div class="flota-card-overlay">
@@ -1253,34 +1271,12 @@ las necesidades de nuestros clientes.</p>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-sm-3 sm-margin-b-4">
+                        <div class="col-sm-6">
                             <a class="flota-card" href="#">
                                 <img src="img/minibuses_01.png" alt="Imagen pendiente">
                                 <div class="flota-card-overlay">
                                     <div>
                                         <h3>MINIBUSES</h3>
-                                        <p>Descripción aquí.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 sm-margin-b-4">
-                            <a class="flota-card" href="#">
-                                <img src="img/970x647/03.jpg" alt="Imagen pendiente">
-                                <div class="flota-card-overlay">
-                                    <div>
-                                        <h3>Título aquí</h3>
-                                        <p>Descripción aquí.</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-sm-3">
-                            <a class="flota-card" href="#">
-                                <img src="img/800x400/01.jpg" alt="Imagen pendiente">
-                                <div class="flota-card-overlay">
-                                    <div>
-                                        <h3>Título aquí</h3>
                                         <p>Descripción aquí.</p>
                                     </div>
                                 </div>
@@ -1417,17 +1413,16 @@ las necesidades de nuestros clientes.</p>
                     <div class="row">
                         <div class="col-sm-4 sm-margin-b-50">
                             <div class="contact-info-copy">
+                                <h2 class="contact-title">Contáctanos</h2>
                                 <p>¿Buscas un partner confiable en transporte minero?</p>
-                                <p>Contáctanos y conversemos cómo podemos aportar a una operación segura, eficiente y alineada a tus requerimientos.</p>
-                                <p>¡Respondemos a la brevedad para coordinar y dar continuidad a tu requerimiento!</p>
+                                <p>Conversemos como podemos aportar a una operación segura, eficiente y alineada a tus requerimientos.</p>
                                 <div class="contact-location">
                                     <img src="img/lugar_01.png" alt="Ubicación">
-                                    <span>Avenida Argentina Oriente #17, Los Andes, Región de Valparaíso.</span>
+                                    <span>Avenida Argentina Oriente #17, Los Andes.</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-8">
-                            <h2 class="contact-title">Contáctanos</h2>
                             <form action="contact.php" method="post">
                                 <div class="row">
                                     <div class="col-sm-4">
