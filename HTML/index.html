@@ -600,6 +600,9 @@
     }
 
     .promo-banner {
+        min-height: 340px;
+        display: flex;
+        align-items: center;
         background-position: center 58%;
         background-size: cover;
     }
@@ -611,6 +614,9 @@
     .promo-banner .container-sm {
         position: relative;
         z-index: 1;
+        width: 100%;
+        padding-top: 104px;
+        padding-bottom: 104px;
     }
 
     .promo-banner .promo-banner-title,
@@ -621,7 +627,17 @@
     }
 
     .promo-banner .promo-banner-text {
+        max-width: 620px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.65;
         font-weight: 400;
+    }
+
+    .promo-banner .promo-banner-title {
+        margin-bottom: 12px;
+        font-size: 34px;
+        line-height: 1.18;
     }
 
     #servicios .media-card-img {
@@ -701,6 +717,27 @@
         font-size: 15px;
         font-weight: 400;
         line-height: 1.68;
+    }
+
+    @media (min-width: 992px) {
+        #servicios > .content-md > .row:last-of-type {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #servicios > .content-md > .row:last-of-type > .col-sm-3 {
+            width: 50%;
+            margin-bottom: 34px;
+        }
+
+        #servicios .media-card-img {
+            aspect-ratio: 16 / 10;
+        }
+
+        #servicios .media-card-img + h3 {
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
     }
 
     @media (max-width: 767px) {
