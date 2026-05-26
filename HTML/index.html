@@ -38,6 +38,12 @@
         <style>
     html {
         font-size: 90%;
+        overflow-x: hidden;
+        text-rendering: optimizeLegibility;
+    }
+
+    body {
+        overflow-x: hidden;
     }
 
     * {
@@ -283,20 +289,23 @@
     #servicios .content-md,
     #novedades .content-lg,
     #contacto .contact-content {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        width: min(calc(100% - 112px), 1140px);
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 84px;
+        padding-bottom: 84px;
     }
 
     #flota .text-center p,
     #servicios .text-center p,
     #novedades .text-center p {
-        max-width: 680px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
         color: #6f7480;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.72;
+        line-height: 1.82;
     }
 
     #flota .row.text-center.margin-b-40 .col-sm-6.col-sm-offset-3,
@@ -307,10 +316,10 @@
 
     #flota .row.text-center.margin-b-40 p,
     #servicios .row.text-center.margin-b-40 p {
-        max-width: none;
-        margin-left: 0;
-        margin-right: 0;
-        text-align: left;
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 
     #nosotros .about-text h2,
@@ -319,10 +328,11 @@
     #novedades h2,
     #contacto .contact-title {
         margin-top: 0;
-        margin-bottom: 16px;
+        margin-bottom: 18px;
         font-size: 32px;
         font-weight: 600;
         line-height: 1.18;
+        letter-spacing: .02em;
     }
 
     @media (max-width: 767px) {
@@ -367,7 +377,7 @@
         z-index: 2;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, rgba(17, 20, 28, .6), rgba(17, 20, 28, .38));
+        background: linear-gradient(180deg, rgba(17, 20, 28, .62), rgba(17, 20, 28, .42));
         content: " ";
     }
 
@@ -406,10 +416,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 150px;
-        padding-bottom: 130px;
+        padding-top: 138px;
+        padding-bottom: 118px;
         box-sizing: border-box;
         text-align: center;
+    }
+
+    #inicio .inicio-content .container {
+        max-width: 840px;
     }
 
     #inicio .promo-block-title,
@@ -421,25 +435,27 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 16px;
-        font-size: 46px;
+        font-size: 40px;
         font-weight: 700;
-        line-height: 1.15;
-        letter-spacing: .5px;
+        line-height: 1.12;
+        letter-spacing: .04em;
+        text-shadow: 0 12px 30px rgba(0, 0, 0, .26);
     }
 
     #inicio .promo-block-text {
         font-size: 17px;
         font-weight: 400;
-        max-width: 760px;
-        line-height: 1.6;
-        margin-top: 20px;
+        max-width: 600px;
+        line-height: 1.74;
+        margin-top: 16px;
         margin-left: auto;
         margin-right: auto;
+        text-shadow: 0 10px 26px rgba(0, 0, 0, .22);
     }
 
     #inicio .btn-theme {
         border-radius: 6px;
-        margin-top: -6px;
+        margin-top: 2px;
     }
 
     #inicio .btn-theme-sm {
@@ -498,8 +514,8 @@
 
     #nosotros .about-main-row {
         display: flex;
-        align-items: center;
-        margin-bottom: 68px;
+        align-items: flex-start;
+        margin-bottom: 72px;
     }
 
     #nosotros .about-main-row:before,
@@ -525,13 +541,30 @@
     #nosotros .about-text p {
         margin-bottom: 18px;
         color: #6f7480;
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.72;
+        line-height: 1.84;
     }
 
     #nosotros .about-text p:last-child {
         margin-bottom: 0;
+    }
+
+    #nosotros .about-cta {
+        display: inline-block;
+        margin-top: 16px;
+        color: #fff;
+        background: #027424;
+        border-color: transparent;
+        box-shadow: 0 12px 24px rgba(2, 116, 36, .18);
+    }
+
+    #nosotros .about-cta:hover,
+    #nosotros .about-cta:focus {
+        color: #fff;
+        background: #025f1f;
+        border-color: transparent;
+        box-shadow: 0 14px 28px rgba(2, 116, 36, .24);
     }
 
     #nosotros .about-main-row .about-image {
@@ -574,9 +607,10 @@
         aspect-ratio: 4 / 3;
         overflow: hidden;
         border-radius: 6px;
-        background: #111;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
-        transition: transform .35s ease, box-shadow .35s ease;
+        background: transparent;
+        border: 1px solid rgba(10, 16, 24, .06);
+        box-shadow: 0 12px 30px rgba(10, 16, 24, .1);
+        transition: transform .38s ease, box-shadow .38s ease, border-color .38s ease;
     }
 
     #flota .flota-card img,
@@ -599,45 +633,26 @@
         object-position: center 64%;
     }
 
-    .promo-banner {
-        min-height: 340px;
-        display: flex;
-        align-items: center;
-        background-position: center 58%;
-        background-size: cover;
+    @media (max-width: 991px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            width: min(calc(100% - 64px), 100%);
+        }
+
     }
 
-    .promo-banner:before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, .22), rgba(0, 0, 0, .34));
-    }
+    @media (max-width: 767px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            width: min(calc(100% - 40px), 100%);
+        }
 
-    .promo-banner .container-sm {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        padding-top: 104px;
-        padding-bottom: 104px;
-    }
-
-    .promo-banner .promo-banner-title,
-    .promo-banner .promo-banner-text {
-        position: relative;
-        z-index: 1;
-        text-shadow: 0 2px 10px rgba(0, 0, 0, .5);
-    }
-
-    .promo-banner .promo-banner-text {
-        max-width: 620px;
-        margin: 0 auto;
-        font-size: 18px;
-        line-height: 1.65;
-        font-weight: 400;
-    }
-
-    .promo-banner .promo-banner-title {
-        margin-bottom: 12px;
-        font-size: 34px;
-        line-height: 1.18;
     }
 
     #servicios .media-card-img {
@@ -651,9 +666,10 @@
 
     #servicios .media-card-img {
         border-radius: 6px;
-        background: #111;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
-        transition: box-shadow .35s ease;
+        background: transparent;
+        border: 1px solid rgba(10, 16, 24, .06);
+        box-shadow: 0 12px 30px rgba(10, 16, 24, .1);
+        transition: box-shadow .38s ease, border-color .38s ease;
     }
 
     #servicios > .content-md > .row.text-center.margin-b-40 {
@@ -693,7 +709,8 @@
     }
 
     #servicios .col-sm-3:hover .media-card-img {
-        box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
+        box-shadow: 0 18px 38px rgba(10, 16, 24, .14);
+        border-color: rgba(10, 16, 24, .1);
     }
 
     #servicios .col-sm-3:hover .media-card-img img {
@@ -716,27 +733,28 @@
         color: #6f7480;
         font-size: 15px;
         font-weight: 400;
-        line-height: 1.68;
+        line-height: 1.74;
     }
 
     @media (min-width: 992px) {
-        #servicios > .content-md > .row:last-of-type {
+    #servicios > .content-md > .row:last-of-type {
             display: flex;
             flex-wrap: wrap;
         }
 
         #servicios > .content-md > .row:last-of-type > .col-sm-3 {
             width: 50%;
-            margin-bottom: 34px;
+            margin-bottom: 38px;
         }
 
         #servicios .media-card-img {
-            aspect-ratio: 16 / 10;
+            aspect-ratio: 16 / 11;
         }
 
         #servicios .media-card-img + h3 {
             margin-top: 18px;
             margin-bottom: 8px;
+            white-space: normal;
         }
     }
 
@@ -778,7 +796,8 @@
     #flota .flota-card:hover,
     #flota .flota-card:focus {
         transform: translateY(-4px);
-        box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
+        box-shadow: 0 18px 38px rgba(10, 16, 24, .14);
+        border-color: rgba(10, 16, 24, .1);
     }
 
     #flota .flota-card:hover img,
@@ -817,7 +836,7 @@
         color: rgba(255, 255, 255, .78);
         font-size: 15px;
         font-weight: 400;
-        line-height: 1.68;
+        line-height: 1.74;
     }
 
     @media (hover: none) {
@@ -841,13 +860,14 @@
         overflow: hidden;
         border-radius: 6px;
         background: #fff;
-        box-shadow: 0 10px 28px rgba(0, 0, 0, .12);
-        transition: transform .35s ease, box-shadow .35s ease;
+        border: 1px solid rgba(10, 16, 24, .06);
+        box-shadow: 0 12px 30px rgba(10, 16, 24, .1);
+        transition: transform .38s ease, box-shadow .38s ease, border-color .38s ease;
     }
 
     #novedades .pricing > .margin-b-20 {
         aspect-ratio: 4 / 3;
-        margin-bottom: 24px;
+        margin-bottom: 22px;
         overflow: hidden;
         background: #111;
     }
@@ -861,7 +881,7 @@
     }
 
     #novedades .pricing > .margin-b-30 {
-        margin: 0 28px 22px;
+        margin: 0 28px 18px;
     }
 
     #novedades .pricing h3 {
@@ -878,7 +898,7 @@
         color: #6f7480;
         font-size: 15px;
         font-weight: 400;
-        line-height: 1.68;
+        line-height: 1.74;
     }
 
     #novedades .pricing .link {
@@ -892,7 +912,8 @@
 
     #novedades .pricing:hover {
         transform: translateY(-4px);
-        box-shadow: 0 18px 42px rgba(0, 0, 0, .16);
+        box-shadow: 0 18px 38px rgba(10, 16, 24, .14);
+        border-color: rgba(10, 16, 24, .1);
     }
 
     #novedades .pricing:hover > .margin-b-20 img {
@@ -910,7 +931,7 @@
     #contacto .contact-section {
         position: relative;
         overflow: hidden;
-        background: url('img/contacto_01.png') center center / cover no-repeat;
+        background: url('img/contacto_01.png') center 52% / cover no-repeat;
     }
 
     #contacto .contact-section:before {
@@ -920,7 +941,7 @@
         bottom: 0;
         left: 0;
         display: block;
-        background: linear-gradient(90deg, rgba(10, 16, 24, .58), rgba(10, 16, 24, .26));
+        background: linear-gradient(90deg, rgba(10, 16, 24, .64), rgba(10, 16, 24, .32));
         content: " ";
     }
 
@@ -931,7 +952,7 @@
 
     #contacto .contact-content > .row {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
     }
 
@@ -952,37 +973,38 @@
     }
 
     #contacto .contact-info-copy p {
-        margin: 0 0 14px;
-        color: rgba(255, 255, 255, .88);
-        font-size: 17px;
+        margin: 0 0 12px;
+        color: rgba(255, 255, 255, .9);
+        font-size: 15px;
         font-weight: 400;
-        line-height: 1.72;
-        text-shadow: 0 6px 18px rgba(0, 0, 0, .2);
+        line-height: 1.82;
+        text-shadow: 0 10px 24px rgba(0, 0, 0, .26);
     }
 
     #contacto .contact-info-copy p:last-of-type {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
 
     #contacto .contact-location {
         display: flex;
         align-items: flex-start;
         gap: 12px;
-        max-width: 390px;
+        max-width: 400px;
     }
 
     #contacto .contact-location img {
-        width: 20px;
-        height: 20px;
-        flex: 0 0 20px;
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
         margin-top: 2px;
     }
 
     #contacto .contact-location span {
-        color: rgba(255, 255, 255, .82);
+        color: rgba(255, 255, 255, .86);
         font-size: 14px;
         font-weight: 500;
-        line-height: 1.55;
+        line-height: 1.5;
+        text-shadow: 0 6px 18px rgba(0, 0, 0, .2);
     }
 
     #contacto .contact-title,
@@ -1004,8 +1026,8 @@
     #contacto .contact-title {
         position: relative;
         color: #fff;
-        margin-bottom: 24px;
-        padding-bottom: 16px;
+        margin-bottom: 22px;
+        padding-bottom: 14px;
         text-shadow: 0 10px 24px rgba(0, 0, 0, .2);
     }
 
@@ -1027,7 +1049,7 @@
 
     #contacto .contact-info-copy .contact-title:after {
         left: 0;
-        width: 54px;
+        width: 48px;
     }
 
     #contacto .contact-label {
@@ -1176,6 +1198,535 @@
             padding-bottom: 54px;
         }
     }
+
+    .reveal {
+        --reveal-x: 0px;
+        --reveal-y: 30px;
+        --reveal-scale: 1;
+        --reveal-delay: 0s;
+        opacity: 0;
+        transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+        transition: opacity .9s cubic-bezier(0.22, 1, 0.36, 1), transform .9s cubic-bezier(0.22, 1, 0.36, 1);
+        transition-delay: var(--reveal-delay);
+        will-change: opacity, transform;
+    }
+
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+
+    .reveal-up {
+        --reveal-y: 30px;
+    }
+
+    .reveal-left {
+        --reveal-x: -60px;
+        --reveal-y: 0px;
+    }
+
+    .reveal-right {
+        --reveal-x: 60px;
+        --reveal-y: 0px;
+    }
+
+    .reveal-zoom {
+        --reveal-y: 0px;
+        --reveal-scale: 1.04;
+    }
+
+    .reveal-stagger {
+        transition-delay: var(--reveal-delay);
+    }
+
+    .section-title-accent {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 18px;
+    }
+
+    .section-title-accent::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 72px;
+        height: 3px;
+        border-radius: 999px;
+        background: #fc0202;
+        transform-origin: left center;
+        transform: scaleX(var(--accent-scale, 1));
+        transition: transform .8s cubic-bezier(0.22, 1, 0.36, 1) .12s;
+    }
+
+    .section-title-accent--center::after {
+        left: 50%;
+        transform-origin: center center;
+        transform: translateX(-50%) scaleX(var(--accent-scale, 1));
+    }
+
+    .reveal.section-title-accent::after {
+        --accent-scale: 0;
+    }
+
+    .reveal.section-title-accent.is-visible::after {
+        --accent-scale: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .reveal {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        .section-title-accent::after {
+            transform: scaleX(1) !important;
+        }
+
+        .section-title-accent--center::after {
+            transform: translateX(-50%) scaleX(1) !important;
+        }
+    }
+
+    /* Premium refinement */
+    .page-on-scroll .header {
+        box-shadow: 0 8px 22px rgba(10, 16, 24, .08);
+    }
+
+    .header .navbar-nav.navbar-nav-right {
+        gap: 2px;
+    }
+
+    .header .nav-item-child {
+        font-size: 13px;
+        line-height: 1.2;
+    }
+
+    .header .nav-item:not(.nav-item-cta) .nav-item-child {
+        letter-spacing: .03em;
+    }
+
+    .header .logo-img {
+        width: 126px;
+    }
+
+    .header .nav-item.nav-item-cta {
+        padding-left: 14px;
+    }
+
+    .header .nav-item.nav-item-cta .btn-denuncias,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:hover,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:focus {
+        padding: 7px 14px;
+        min-height: 34px;
+        font-size: 12px;
+        letter-spacing: .035em;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14), 0 10px 22px rgba(10, 16, 24, .14);
+    }
+
+    #nosotros .content-lg,
+    #flota .content-lg,
+    #servicios .content-md,
+    #novedades .content-lg,
+    #contacto .contact-content {
+        width: min(calc(100% - 120px), 1240px);
+        padding-top: 108px;
+        padding-bottom: 108px;
+    }
+
+    #flota .text-center p,
+    #servicios .text-center p,
+    #novedades .text-center p {
+        max-width: 660px;
+        line-height: 1.88;
+    }
+
+    #flota .row.text-center.margin-b-40 p,
+    #servicios .row.text-center.margin-b-40 p {
+        max-width: 680px;
+    }
+
+    #nosotros .about-text {
+        max-width: 520px;
+    }
+
+    #nosotros .about-main-row {
+        margin-bottom: 84px;
+    }
+
+    #nosotros .about-text h2,
+    #flota h2,
+    #servicios h2,
+    #novedades h2,
+    #contacto .contact-title {
+        margin-bottom: 20px;
+        font-size: 29px;
+        line-height: 1.16;
+    }
+
+    #nosotros .about-text p {
+        line-height: 1.88;
+    }
+
+    #inicio .inicio-content {
+        padding-top: 126px;
+        padding-bottom: 104px;
+    }
+
+    #inicio .inicio-content .container {
+        max-width: 760px;
+    }
+
+    #inicio .promo-block-title {
+        margin-bottom: 14px;
+        font-size: 36px;
+        line-height: 1.08;
+        letter-spacing: .045em;
+    }
+
+    #inicio .promo-block-text {
+        max-width: 540px;
+        margin-top: 14px;
+        font-size: 16px;
+        line-height: 1.82;
+    }
+
+    #inicio .btn-theme-sm {
+        padding: 9px 20px;
+        min-width: 102px;
+        font-size: 13px;
+    }
+
+    #flota .flota-card,
+    #servicios .media-card-img,
+    #novedades .pricing {
+        box-shadow: 0 10px 24px rgba(10, 16, 24, .08);
+    }
+
+    #flota .flota-card:hover,
+    #flota .flota-card:focus,
+    #servicios .col-sm-3:hover .media-card-img,
+    #novedades .pricing:hover {
+        box-shadow: 0 16px 30px rgba(10, 16, 24, .12);
+    }
+
+    #flota .flota-card:hover,
+    #flota .flota-card:focus,
+    #servicios .col-sm-3:hover,
+    #novedades .pricing:hover {
+        transform: translateY(-3px);
+    }
+
+    #servicios > .content-md > .row.margin-b-50 {
+        margin-bottom: 48px !important;
+    }
+
+    #servicios > .content-md > .row:last-of-type {
+        row-gap: 8px;
+    }
+
+    #servicios .media-card-img + h3 {
+        margin: 20px 0 9px;
+        font-size: 19px;
+    }
+
+    #servicios .media-card-img + h3 + p,
+    #novedades .pricing p,
+    #flota .flota-card-overlay p {
+        line-height: 1.8;
+    }
+
+    #novedades .pricing > .margin-b-30 {
+        margin: 0 26px 16px;
+    }
+
+    #contacto .contact-info-copy {
+        max-width: 360px;
+    }
+
+    #contacto .contact-info-copy p {
+        line-height: 1.86;
+    }
+
+    #contacto form {
+        max-width: 720px;
+        padding: 30px 28px;
+        box-shadow: 0 14px 28px rgba(10, 16, 24, .12);
+    }
+
+    .reveal {
+        --reveal-y: 26px;
+        transition: opacity 1.05s cubic-bezier(0.22, 1, 0.36, 1), transform 1.05s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .section-title-accent::after {
+        transition: transform .95s cubic-bezier(0.22, 1, 0.36, 1) .14s;
+    }
+
+    @media (min-width: 992px) {
+        #servicios .media-card-img {
+            aspect-ratio: 16 / 12;
+        }
+    }
+
+    @media (max-width: 991px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            width: min(calc(100% - 64px), 100%);
+            padding-top: 88px;
+            padding-bottom: 88px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            width: min(calc(100% - 40px), 100%);
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        #inicio .promo-block-title {
+            font-size: 30px;
+        }
+
+        #inicio .promo-block-text {
+            font-size: 15px;
+            max-width: 92%;
+        }
+
+        #nosotros .about-text h2,
+        #flota h2,
+        #servicios h2,
+        #novedades h2,
+        #contacto .contact-title {
+            font-size: 26px;
+        }
+    }
+
+    /* Global scale to 80% */
+    .header .logo-img {
+        width: 118px;
+    }
+
+    .header .nav-item-child {
+        font-size: 12px;
+    }
+
+    .header .nav-item.nav-item-cta .btn-denuncias,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:hover,
+    .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:focus {
+        padding: 6px 13px;
+        min-height: 32px;
+        font-size: 11px;
+    }
+
+    #nosotros .content-lg,
+    #flota .content-lg,
+    #servicios .content-md,
+    #novedades .content-lg,
+    #contacto .contact-content {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    #inicio {
+        height: 82vh;
+        min-height: 600px;
+    }
+
+    #inicio .inicio-content .container {
+        max-width: 680px;
+    }
+
+    #inicio .promo-block-title {
+        font-size: 31px;
+        margin-bottom: 12px;
+    }
+
+    #inicio .promo-block-text {
+        max-width: 500px;
+        font-size: 15px;
+        line-height: 1.86;
+    }
+
+    #inicio .btn-theme-sm {
+        padding: 8px 18px;
+        min-width: 96px;
+        font-size: 12px;
+    }
+
+    #nosotros .about-text {
+        max-width: 480px;
+    }
+
+    #nosotros .about-main-row {
+        margin-bottom: 72px;
+    }
+
+    #nosotros .about-text h2,
+    #flota h2,
+    #servicios h2,
+    #novedades h2,
+    #contacto .contact-title {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    #flota .text-center p,
+    #servicios .text-center p,
+    #novedades .text-center p,
+    #nosotros .about-text p,
+    #contacto .contact-info-copy p {
+        font-size: 14px;
+    }
+
+    #flota .flota-card,
+    #servicios .media-card-img,
+    #novedades .pricing {
+        box-shadow: 0 8px 20px rgba(10, 16, 24, .07);
+    }
+
+    #servicios .media-card-img + h3,
+    #novedades .pricing h3,
+    #flota .flota-card-overlay h3 {
+        font-size: 18px;
+    }
+
+    #servicios .media-card-img + h3 + p,
+    #novedades .pricing p,
+    #flota .flota-card-overlay p {
+        font-size: 14px;
+    }
+
+    #novedades .pricing {
+        padding-bottom: 24px;
+    }
+
+    #novedades .pricing > .margin-b-30 {
+        margin: 0 24px 14px;
+    }
+
+    #contacto .contact-info-copy {
+        max-width: 332px;
+    }
+
+    #contacto form {
+        max-width: 680px;
+        padding: 26px 24px;
+    }
+
+    @media (min-width: 992px) {
+        #servicios .media-card-img {
+            aspect-ratio: 16 / 13;
+        }
+    }
+
+    @media (max-width: 991px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            padding-top: 76px;
+            padding-bottom: 76px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #nosotros .content-lg,
+        #flota .content-lg,
+        #servicios .content-md,
+        #novedades .content-lg,
+        #contacto .contact-content {
+            padding-top: 58px;
+            padding-bottom: 58px;
+        }
+
+        #inicio {
+            min-height: 540px;
+        }
+
+        #inicio .promo-block-title {
+            font-size: 27px;
+        }
+
+        #inicio .promo-block-text {
+            font-size: 14px;
+        }
+
+        #nosotros .about-text h2,
+        #flota h2,
+        #servicios h2,
+        #novedades h2,
+        #contacto .contact-title {
+            font-size: 24px;
+        }
+    }
+
+    /* Navbar alignment fix */
+    .header .navbar,
+    .header .navbar > .container,
+    .header .navbar-nav.navbar-nav-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .navbar > .container {
+        justify-content: space-between;
+    }
+
+    .header .navbar-nav.navbar-nav-right {
+        min-height: 68px;
+        transform: translateY(6px);
+    }
+
+    .header .nav-item {
+        display: flex;
+        align-items: center;
+    }
+
+    .header .nav-item-child {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        min-height: 68px;
+        line-height: 1;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
+        top: auto;
+        bottom: 14px;
+    }
+
+    .header .nav-item.nav-item-cta .btn-denuncias {
+        min-height: 32px;
+    }
+
+    @media (max-width: 991px) {
+        .header .navbar-nav.navbar-nav-right {
+            transform: none;
+        }
+
+        .header .nav-item-child {
+            min-height: auto;
+        }
+
+        .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
+            bottom: 10px;
+        }
+    }
 </style>
     </head>
     <!-- END HEAD -->
@@ -1251,7 +1802,7 @@
                 <div class="row margin-b-50 about-main-row">
                     <div class="col-sm-6 sm-margin-b-50">
                         <div class="about-text">
-                            <h2>Nosotros</h2>
+                            <h2 class="section-title-accent">Nosotros</h2>
                             <p>Somos una empresa de transporte exclusiva para la industria minera en Chile. Garantizamos un transporte seguro, eficiente y sustentable, integrando tecnología de alta gama que se adapta a
 las necesidades de nuestros clientes.</p>
                             <p>Operamos en las rutas más exigentes del país y contamos con una flota moderna con más de 150 equipos, junto a trabajadores altamente capacitados para asegurar el bienestar de nuestros conductores y nuestros pasajeros en cada trayecto.</p>
@@ -1264,7 +1815,6 @@ las necesidades de nuestros clientes.</p>
                     </div>
                 </div>
                 <!--// end row -->
-
                 <div class="row margin-b-50 about-main-row">
                     <div class="col-sm-6 sm-margin-b-50">
                         <div class="about-image about-image-main">
@@ -1273,9 +1823,9 @@ las necesidades de nuestros clientes.</p>
                     </div>
                     <div class="col-sm-6">
                         <div class="about-text">
-                            <h2>Electromovilidad</h2>
-                            <p>Avanzamos en electromovilidad como parte de una estrategia concreta para reducir el impacto ambiental y optimizar la eficiencia operativa en entornos de alta exigencia.</p>
-                            <p>Contamos con infraestructura propia, incluyendo una electrolinera de hasta 600 kW en el Valle del Aconcagua, que permite sostener operaciones eléctricas en condiciones reales de faena.</p>
+                            <h2 class="section-title-accent">Electromovilidad</h2>
+                            <p>Impulsamos soluciones de electromovilidad para una operaci&oacute;n minera m&aacute;s eficiente, sustentable y preparada para los desaf&iacute;os de alta exigencia.</p>
+                            <a class="btn-theme btn-theme-sm btn-default-bg text-uppercase about-cta" href="electromovilidad.html">Conocer m&aacute;s</a>
                         </div>
                     </div>
                 </div>
@@ -1290,7 +1840,7 @@ las necesidades de nuestros clientes.</p>
                 <div class="content-lg container">
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <h2>Nuestra flota</h2>
+                            <h2 class="section-title-accent section-title-accent--center">Nuestra flota</h2>
                             <p>Más de 150 equipos preparados para operar en condiciones exigentes, integrando innovación y electromovilidad para una operación moderna, segura y sustentable.</p>
                         </div>
                     </div>
@@ -1326,21 +1876,13 @@ las necesidades de nuestros clientes.</p>
         </div>
         <!-- End Nuestra flota -->
 
-        <!-- Promo Banner -->
-        <div class="promo-banner" style="background-image: url('img/franja_01.png');">
-            <div class="container-sm content-lg">
-                <h3 class="promo-banner-title">Consorcio Andino</h3>
-                <p class="promo-banner-text">La seguridad es la base de nuestra operación.</p>
-            </div>
-        </div>
-        <!-- End Promo Banner -->
 
         <!-- Servicios -->
         <div id="servicios">
             <div class="content-md container">
                 <div class="row text-center margin-b-40">
                     <div class="col-sm-6 col-sm-offset-3">
-                        <h2>Servicios</h2>
+                        <h2 class="section-title-accent section-title-accent--center">Servicios</h2>
                         <p>Operamos en entornos de alta complejidad, entregando soluciones seguras, eficientes y confiables que aseguran la continuidad operacional en cada servicio.</p>
                     </div>
                 </div>
@@ -1387,7 +1929,7 @@ las necesidades de nuestros clientes.</p>
                 <div class="content-lg container">
                     <div class="row text-center margin-b-40">
                         <div class="col-sm-6 col-sm-offset-3">
-                            <h2>Novedades</h2>
+                            <h2 class="section-title-accent section-title-accent--center">Novedades</h2>
                             <p>Noticias que impulsan nuestro desarrollo.</p>
                         </div>
                     </div>
@@ -1452,7 +1994,7 @@ las necesidades de nuestros clientes.</p>
                             <div class="contact-info-copy">
                                 <h2 class="contact-title">Contáctanos</h2>
                                 <p>¿Buscas un partner confiable en transporte minero?</p>
-                                <p>Conversemos como podemos aportar a una operación segura, eficiente y alineada a tus requerimientos.</p>
+                                <p>Somos una servicio seguro, eficiente y alineado a tus requerimientos.</p>
                                 <div class="contact-location">
                                     <img src="img/lugar_01.png" alt="Ubicación">
                                     <span>Avenida Argentina Oriente #17, Los Andes.</span>
@@ -1569,13 +2111,82 @@ las necesidades de nuestros clientes.</p>
         <script>
             $(window).load(function() {
                 new Swiper('#inicio', {
-                    speed: 700,
-                    autoplay: 3500,
+                    speed: 1200,
+                    autoplay: 4600,
                     loop: true,
                     effect: 'fade',
                     simulateTouch: false
                 });
             });
+        </script>
+        <script>
+            (function() {
+                function addReveal(selector, classes, options) {
+                    document.querySelectorAll(selector).forEach(function(element, index) {
+                        element.classList.add('reveal');
+                        classes.forEach(function(className) {
+                            element.classList.add(className);
+                        });
+
+                        if (options && typeof options.delay === 'number') {
+                            element.style.setProperty('--reveal-delay', options.delay + 's');
+                        }
+
+                        if (options && typeof options.stagger === 'number') {
+                            element.classList.add('reveal-stagger');
+                            element.style.setProperty('--reveal-delay', (index * options.stagger).toFixed(2) + 's');
+                        }
+                    });
+                }
+
+                function initRevealSystem() {
+                    addReveal('#inicio .inicio-content .container', ['reveal-up']);
+                    addReveal('#nosotros .about-text h2', ['reveal-up']);
+                    addReveal('#nosotros .about-text p', ['reveal-up'], { stagger: 0.08 });
+                    addReveal('#nosotros .about-cta', ['reveal-up'], { delay: 0.16 });
+                    addReveal('#nosotros .about-main-row:nth-of-type(1) .about-image', ['reveal-right', 'reveal-zoom']);
+                    addReveal('#nosotros .about-main-row:nth-of-type(2) .about-image', ['reveal-left', 'reveal-zoom']);
+                    addReveal('#flota .row.text-center.margin-b-40 h2, #servicios .row.text-center.margin-b-40 h2, #novedades .row.text-center.margin-b-40 h2, #contacto .contact-title', ['reveal-up']);
+                    addReveal('#flota .row.text-center.margin-b-40 p, #servicios .row.text-center.margin-b-40 p, #novedades .row.text-center.margin-b-40 p', ['reveal-up'], { delay: 0.08 });
+                    addReveal('#flota .row.row-space-2 > [class*="col-"]', ['reveal-up'], { stagger: 0.12 });
+                    addReveal('#servicios > .content-md > .row:last-of-type > [class*="col-"]', ['reveal-up'], { stagger: 0.1 });
+                    addReveal('#novedades .row.row-space-2 > [class*="col-"]', ['reveal-up'], { stagger: 0.12 });
+                    addReveal('#contacto .contact-info-copy', ['reveal-left']);
+                    addReveal('#contacto form', ['reveal-right']);
+
+                    var revealElements = document.querySelectorAll('.reveal');
+                    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+                    if (reduceMotion || !('IntersectionObserver' in window)) {
+                        revealElements.forEach(function(element) {
+                            element.classList.add('is-visible');
+                        });
+                        return;
+                    }
+
+                    var observer = new IntersectionObserver(function(entries, currentObserver) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                currentObserver.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.18,
+                        rootMargin: '0px 0px -12% 0px'
+                    });
+
+                    revealElements.forEach(function(element) {
+                        observer.observe(element);
+                    });
+                }
+
+                if (document.readyState === 'loading') {
+                    document.addEventListener('DOMContentLoaded', initRevealSystem);
+                } else {
+                    initRevealSystem();
+                }
+            })();
         </script>
 
     </body>
