@@ -702,11 +702,20 @@
 
     .electro-feature-row {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .electro-feature-section .electro-section-copy {
         max-width: 560px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        transform: translateY(0);
+    }
+
+    .electro-feature-section .electro-feature-body {
+        margin-bottom: 16px;
+        line-height: 1.55;
     }
 
     .electro-feature-lead {
@@ -2426,6 +2435,287 @@
             bottom: 10px;
         }
     }
+    /* Premium global refinement */
+    .container-premium {
+        width: 100% !important;
+        max-width: 1380px !important;
+        margin: 0 auto !important;
+        padding-left: 70px !important;
+        padding-right: 70px !important;
+    }
+
+    #electromovilidad-page .container-premium,
+    #contacto .contact-content.container-premium {
+        padding-top: 116px;
+        padding-bottom: 116px;
+    }
+
+    #electromovilidad-page .container-premium {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .section-title-accent,
+    #contacto .contact-title {
+        padding-bottom: 0 !important;
+    }
+
+    .section-title-accent::after,
+    #contacto .contact-title:after,
+    #contacto .contact-info-copy .contact-title:after {
+        display: none !important;
+    }
+
+    .section-kicker {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 0;
+        color: #fc0202;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 2.8px;
+        line-height: 1.35;
+        text-transform: uppercase;
+    }
+
+    .section-title,
+    .electro-section-title {
+        display: block;
+        margin: 0 0 30px;
+        color: #1d1d1d;
+        font-size: clamp(34px, 3vw, 42px);
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 1.08;
+    }
+
+    .section-description,
+    .electro-feature-body,
+    #contacto .contact-info-copy p {
+        max-width: 700px;
+        color: #6d6d6d;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    #contacto .contact-title.section-title {
+        color: #fff;
+        text-shadow: 0 8px 18px rgba(0, 0, 0, .18);
+    }
+
+    #contacto .contact-info-copy p {
+        color: rgba(255, 255, 255, .86);
+    }
+
+    #electromovilidad-page {
+        padding-top: 112px;
+    }
+
+    .electro-section {
+        padding: 116px 0;
+    }
+
+    .electro-feature-section .electro-section-copy {
+        max-width: 560px;
+    }
+
+    .electro-feature-section .electro-feature-row {
+        align-items: flex-start;
+    }
+
+    .electro-feature-section .electro-section-title {
+        margin-bottom: 10px;
+    }
+
+    .electro-feature-section .electro-section-title .section-kicker {
+        margin-bottom: 24px;
+    }
+
+    .electromovilidad-points {
+        margin-top: 18px;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .electromovilidad-points li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 8px;
+        font-size: 0.82rem;
+        line-height: 1.42;
+        color: #6f6f6f;
+        font-weight: 500;
+    }
+
+    .electromovilidad-points li::before {
+        content: "+";
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #027424;
+        font-weight: 700;
+    }
+
+    .electro-feature-section .electro-section-copy > .electro-feature-body:first-of-type {
+        margin-bottom: 18px;
+        line-height: 1.5;
+    }
+
+    .electro-feature-section .electro-section-copy {
+        padding-top: 0;
+        padding-bottom: 0;
+        transform: translateY(0);
+    }
+
+    .electro-gallery {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .electro-gallery .electro-media {
+        min-height: 420px;
+        border-radius: 14px;
+    }
+
+    .electro-gallery--feature .electro-media img {
+        border-radius: 14px;
+    }
+
+    .electro-gallery-pagination .swiper-pagination-bullet {
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 255, 255, .32);
+    }
+
+    .electro-gallery-pagination .swiper-pagination-bullet-active {
+        width: 7px;
+        height: 7px;
+        background: rgba(255, 255, 255, .86);
+    }
+
+    .electro-stat-card {
+        padding: 34px 26px 30px;
+        border: 1px solid rgba(12, 20, 28, .05);
+        border-radius: 14px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, .05);
+    }
+
+    #electromovilidad-page .electro-stats .row.row-space-2 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+
+    #electromovilidad-page .electro-stats .row.row-space-2 > [class*="col-"] {
+        display: flex;
+    }
+
+    #electromovilidad-page .electro-stats .row.row-space-2 > [class*="col-"] .electro-stat-card {
+        width: 100%;
+        height: 100%;
+        min-height: 214px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .electro-stat-card:hover,
+    .electro-stat-card:focus-within {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .06);
+        transition: all .45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .electro-stat-logo {
+        margin-bottom: 22px;
+    }
+
+    .electro-card-kicker {
+        margin-top: 10px;
+        margin-bottom: 18px;
+    }
+
+    .electro-card-value {
+        margin-bottom: 14px;
+        font-size: 22px;
+    }
+
+    .electro-card-text {
+        max-width: 240px;
+        color: #6d6d6d;
+        font-size: 0.92rem;
+        font-weight: 400;
+        line-height: 1.75;
+    }
+
+    #electromovilidad-page .electro-stats .row.row-space-2 > [class*="col-"] .electro-card-text {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transport-card .electro-card-text {
+        max-width: 258px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.68;
+    }
+
+    #contacto .contact-info-copy {
+        max-width: 420px;
+    }
+
+    #contacto form {
+        max-width: 700px;
+        padding: 30px 28px;
+        box-shadow: 0 16px 32px rgba(10, 16, 24, .1);
+    }
+
+    @media (max-width: 991px) {
+        .container-premium {
+            padding-left: 42px !important;
+            padding-right: 42px !important;
+        }
+
+        .electro-section {
+            padding: 88px 0;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .container-premium {
+            padding-left: 20px !important;
+            padding-right: 20px !important;
+        }
+
+        .electro-section {
+            padding: 64px 0;
+        }
+
+        .section-title,
+        .electro-section-title {
+            font-size: 30px;
+            margin-bottom: 24px;
+        }
+
+        .section-kicker {
+            margin-top: 10px;
+            margin-bottom: 0;
+            font-size: 11px;
+            letter-spacing: 2.2px;
+        }
+
+        .section-description,
+        .electro-feature-body,
+        #contacto .contact-info-copy p {
+            font-size: 15px;
+            line-height: 1.82;
+        }
+
+        .electro-gallery .electro-media {
+            min-height: 310px;
+        }
+    }
 </style>
     </head>
     <!-- END HEAD -->
@@ -2437,7 +2727,7 @@
         <header class="header navbar-fixed-top">
             <!-- Navbar -->
             <nav class="navbar" role="navigation">
-                <div class="container">
+                <div class="container container-premium">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="menu-container js_nav-item">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -2481,9 +2771,15 @@
                     <div class="row electro-feature-row">
                         <div class="col-sm-6 sm-margin-b-50">
                             <div class="electro-section-copy">
-                                <h2 class="electro-section-title section-title-accent">ELECTROMOVILIDAD</h2>
-                                <p class="electro-feature-body">Desarrollamos la electromovilidad junto a nuestros clientes con la única electrolinera privada en el Valle del Aconcagua y buses el&eacute;ctricos de &uacute;ltima generaci&oacute;n orientados a operaciones de alta exigencia.</p>
-                                <p class="electro-feature-body">Nuestra estrategia apunta a avanzar hacia una operaci&oacute;n m&aacute;s eficiente, segura y sustentable, reduciendo emisiones y optimizando el rendimiento operacional en faena.</p>
+                                <h2 class="electro-section-title section-title">ELECTROMOVILIDAD<span class="section-kicker">INNOVACIÓN SOSTENIBLE EN RUTA</span></h2>
+                                <p class="electro-feature-body">Desarrollamos soluciones de electromovilidad junto a nuestros clientes, integrando buses el&eacute;ctricos de &uacute;ltima generaci&oacute;n para rutas mineras de alta exigencia y condiciones clim&aacute;ticas extremas.</p>
+                                <ul class="electromovilidad-points">
+                                    <li>&Uacute;nica electrolinera privada del Valle del Aconcagua.</li>
+                                    <li>Infraestructura orientada a operaciones mineras de alta exigencia.</li>
+                                    <li>Optimizaci&oacute;n de continuidad operacional y tiempos de carga.</li>
+                                    <li>Reducci&oacute;n de emisiones y menor impacto ambiental.</li>
+                                    <li>Impulso a una operaci&oacute;n m&aacute;s eficiente, segura y sustentable.</li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -2515,16 +2811,16 @@
             </section>
 
             <section class="electro-section electro-stats">
-                <div class="container">
+                <div class="container container-premium">
                     <div class="row row-space-2">
                         <div class="col-sm-3 col-xs-6 sm-margin-b-4">
-                            <div class="electro-stat-card">
+                            <div class="electro-stat-card transport-card">
                                 <div class="electro-stat-logo">
                                     <img src="img/electrolinera_logo.png" alt="Electrolinera">
                                 </div>
                                 <span class="electro-card-kicker">INFRAESTRUCTURA</span>
                                 <h3 class="electro-card-value">ELECTROLINERA</h3>
-                                <p class="electro-card-text">Infraestructura propia con capacidad de carga de hasta 600 kW para operaciones de alto rendimiento.</p>
+                                <p class="electro-card-text">Infraestructura propia con carga de hasta 600 kW para operaciones de alto rendimiento.</p>
                             </div>
                         </div>
                         <div class="col-sm-3 col-xs-6 sm-margin-b-4">
@@ -2542,9 +2838,9 @@
                                 <div class="electro-stat-logo">
                                     <img src="img/bus_logo.png" alt="Bus eléctrico">
                                 </div>
-                                <span class="electro-card-kicker">BUS EL&Eacute;CTRICO</span>
+                                <span class="electro-card-kicker">BUSES EL&Eacute;CTRICOS</span>
                                 <h3 class="electro-card-value">TRANSPORTE</h3>
-                                <p class="electro-card-text">Bus el&eacute;ctrico de 12 metros dise&ntilde;ado para transporte de pasajeros de larga distancia y operaci&oacute;n intensiva.</p>
+                                <p class="electro-card-text">Buses el&eacute;ctricos de 12 metros dise&ntilde;ados para transporte de pasajeros en operaciones de alta exigencia.</p>
                             </div>
                         </div>
                         <div class="col-sm-3 col-xs-6">
@@ -2565,11 +2861,11 @@
         <!-- Contacto -->
         <div id="contacto">
             <div class="contact-section">
-                <div class="contact-content content-lg container">
+                <div class="contact-content content-lg container container-premium">
                     <div class="row">
                         <div class="col-sm-4 sm-margin-b-50">
                             <div class="contact-info-copy">
-                                <h2 class="contact-title">Contáctanos</h2>
+                                <h2 class="contact-title section-title">Contáctanos</h2>
                                 <p>¿Buscas un partner confiable en transporte minero?</p>
                                 <p>Somos una servicio seguro, eficiente y alineado a tus requerimientos.</p>
                                 <div class="contact-location">
@@ -2607,7 +2903,7 @@
         <footer class="footer">
             <!-- Links -->
             <div class="section-seperator">
-                <div class="content-md container">
+                <div class="content-md container container-premium">
                     <div class="row">
                         <div class="col-sm-2 sm-margin-b-30">
                             <!-- List -->
@@ -2779,5 +3075,6 @@
     </body>
     <!-- END BODY -->
 </html>
+
 
 
