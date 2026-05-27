@@ -2792,7 +2792,7 @@
     }
 
     html {
-        scroll-behavior: smooth;
+        scroll-behavior: auto;
     }
 
     #inicio,
@@ -3358,10 +3358,13 @@
                             var offset = 70;
                             var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
 
-                            window.scrollTo({
-                                top: targetPosition,
-                                behavior: 'smooth'
-                            });
+                            if (window.jQuery) {
+                                window.jQuery('html, body').stop().animate({
+                                    scrollTop: targetPosition
+                                }, 450);
+                            } else {
+                                window.scrollTo(0, targetPosition);
+                            }
                         }, 350);
                     });
                 });
