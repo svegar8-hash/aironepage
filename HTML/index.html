@@ -1547,22 +1547,22 @@
         }
     }
 
-    /* Global scale to 80% */
+    /* Global scale to 75% */
     .header .logo-img {
-        width: 118px;
+        width: 112px;
     }
 
     .header .nav-item-child {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .header .nav-item.nav-item-cta .btn-denuncias,
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias,
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:hover,
     .page-on-scroll .header .nav-item.nav-item-cta .btn-denuncias:focus {
-        padding: 6px 13px;
-        min-height: 32px;
-        font-size: 11px;
+        padding: 5px 12px;
+        min-height: 30px;
+        font-size: 10px;
     }
 
     #nosotros .content-lg,
@@ -1570,42 +1570,42 @@
     #servicios .content-md,
     #novedades .content-lg,
     #contacto .contact-content {
-        padding-top: 96px;
-        padding-bottom: 96px;
+        padding-top: 90px;
+        padding-bottom: 90px;
     }
 
     #inicio {
-        height: 82vh;
-        min-height: 600px;
+        height: 78vh;
+        min-height: 560px;
     }
 
     #inicio .inicio-content .container {
-        max-width: 680px;
+        max-width: 640px;
     }
 
     #inicio .promo-block-title {
-        font-size: 31px;
-        margin-bottom: 12px;
+        font-size: 29px;
+        margin-bottom: 10px;
     }
 
     #inicio .promo-block-text {
-        max-width: 500px;
-        font-size: 15px;
-        line-height: 1.86;
+        max-width: 470px;
+        font-size: 14px;
+        line-height: 1.8;
     }
 
     #inicio .btn-theme-sm {
-        padding: 8px 18px;
-        min-width: 96px;
-        font-size: 12px;
+        padding: 7px 16px;
+        min-width: 90px;
+        font-size: 11px;
     }
 
     #nosotros .about-text {
-        max-width: 480px;
+        max-width: 452px;
     }
 
     #nosotros .about-main-row {
-        margin-bottom: 72px;
+        margin-bottom: 66px;
     }
 
     #nosotros .about-text h2,
@@ -1613,8 +1613,8 @@
     #servicios h2,
     #novedades h2,
     #contacto .contact-title {
-        font-size: 26px;
-        margin-bottom: 18px;
+        font-size: 24px;
+        margin-bottom: 16px;
     }
 
     #flota .text-center p,
@@ -1622,7 +1622,7 @@
     #novedades .text-center p,
     #nosotros .about-text p,
     #contacto .contact-info-copy p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     #flota .flota-card,
@@ -1634,35 +1634,165 @@
     #servicios .media-card-img + h3,
     #novedades .pricing h3,
     #flota .flota-card-overlay h3 {
-        font-size: 18px;
+        font-size: 17px;
     }
 
     #servicios .media-card-img + h3 + p,
     #novedades .pricing p,
     #flota .flota-card-overlay p {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     #novedades .pricing {
-        padding-bottom: 24px;
+        padding-bottom: 22px;
     }
 
     #novedades .pricing > .margin-b-30 {
-        margin: 0 24px 14px;
+        margin: 0 22px 12px;
     }
 
     #contacto .contact-info-copy {
-        max-width: 332px;
+        max-width: 316px;
+    }
+
+    #contacto .contact-section {
+        background: #f5f5f5;
+    }
+
+    #contacto .contact-section:before {
+        display: none;
+    }
+
+    #contacto .contact-content {
+        position: relative;
+        z-index: auto;
+    }
+
+    #contacto .contact-content > .row {
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    #contacto .col-sm-4 {
+        padding-right: 54px;
+    }
+
+    #contacto .col-sm-8 {
+        padding-left: 18px;
+    }
+
+    #contacto .contact-title.section-title {
+        color: #1d1d1d;
+        text-shadow: none;
+    }
+
+    #contacto .contact-info-copy p {
+        color: #5c5c5c;
+        line-height: 1.9;
+        text-shadow: none;
+    }
+
+    #contacto .contact-location span {
+        color: #555;
+        line-height: 1.7;
+        text-shadow: none;
+    }
+
+    #contacto .contact-label,
+    #contacto .contact-text {
+        color: #555;
+        text-shadow: none;
+    }
+
+    #contacto .margin-b-40 {
+        padding-left: 0;
+        border-left: 0;
     }
 
     #contacto form {
-        max-width: 680px;
-        padding: 26px 24px;
+        max-width: 648px;
+        margin: 0 auto;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+    }
+
+    #contacto .contact-input {
+        width: 100%;
+        height: 54px;
+        padding: 0 18px;
+        margin-bottom: 18px;
+        border: 1px solid #d8d8d8;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        color: #444;
+        font-size: .95rem;
+        transition: all .3s ease;
+    }
+
+    #contacto .contact-input:focus {
+        border-color: #fc0202;
+        color: #444;
+        outline: none;
+        box-shadow: none;
+    }
+
+    #contacto .contact-input::placeholder {
+        color: #8a8a8a;
+    }
+
+    #contacto textarea.contact-input {
+        min-height: 140px;
+        height: auto;
+        padding-top: 16px;
+        resize: none;
+    }
+
+    #contacto .btn-theme {
+        height: 54px;
+        padding: 0 42px;
+        border: none;
+        border-radius: 999px;
+        background: #fc0202;
+        color: #fff;
+        font-weight: 600;
+        box-shadow: none;
+        transition: all .3s ease;
+    }
+
+    #contacto .btn-theme:hover,
+    #contacto .btn-theme:focus {
+        background: #d90101;
+        color: #fff;
+        transform: translateY(-1px);
+        box-shadow: none;
+    }
+
+    #flota .flota-card {
+        aspect-ratio: 16 / 10;
+    }
+
+    #servicios .media-card-img {
+        aspect-ratio: 16 / 10;
+    }
+
+    #novedades .pricing > .margin-b-20 {
+        aspect-ratio: 16 / 10;
+    }
+
+    #contacto form {
+        max-width: 648px;
+        padding: 24px 22px;
     }
 
     @media (min-width: 992px) {
         #servicios .media-card-img {
-            aspect-ratio: 16 / 13;
+            aspect-ratio: 16 / 10;
         }
     }
 
@@ -1672,8 +1802,14 @@
         #servicios .content-md,
         #novedades .content-lg,
         #contacto .contact-content {
-            padding-top: 76px;
-            padding-bottom: 76px;
+            padding-top: 72px;
+            padding-bottom: 72px;
+        }
+
+        #contacto .col-sm-4,
+        #contacto .col-sm-8 {
+            padding-right: 15px;
+            padding-left: 15px;
         }
     }
 
@@ -1683,20 +1819,20 @@
         #servicios .content-md,
         #novedades .content-lg,
         #contacto .contact-content {
-            padding-top: 58px;
-            padding-bottom: 58px;
+            padding-top: 54px;
+            padding-bottom: 54px;
         }
 
         #inicio {
-            min-height: 540px;
+            min-height: 500px;
         }
 
         #inicio .promo-block-title {
-            font-size: 27px;
+            font-size: 25px;
         }
 
         #inicio .promo-block-text {
-            font-size: 14px;
+            font-size: 13px;
         }
 
         #nosotros .about-text h2,
@@ -1704,7 +1840,7 @@
         #servicios h2,
         #novedades h2,
         #contacto .contact-title {
-            font-size: 24px;
+            font-size: 22px;
         }
     }
 
@@ -2135,6 +2271,231 @@
             min-height: 100vh;
         }
     }
+
+    /* Final premium contact override inspired by reference */
+    #contacto .contact-section {
+        background: #ffffff !important;
+    }
+
+    #contacto .contact-section:before {
+        display: none !important;
+    }
+
+    #contacto .contact-content {
+        position: relative;
+        z-index: auto;
+    }
+
+    #contacto .contact-content.contact-container {
+        max-width: 1180px;
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    #contacto .contact-heading {
+        margin-bottom: 58px;
+    }
+
+    #contacto .contact-grid {
+        display: grid;
+        grid-template-columns: 420px 1fr;
+        gap: 48px;
+        align-items: start;
+    }
+
+    #contacto .contact-heading .contact-title.section-title {
+        color: #1d1d1d !important;
+        margin-bottom: 0;
+        padding-bottom: 0 !important;
+        text-shadow: none !important;
+        font-size: 4rem;
+        font-weight: 900 !important;
+        line-height: 1.05;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #contacto .contact-title:after,
+    #contacto .contact-title:before,
+    #contacto .contact-info-copy .contact-title:after,
+    #contacto .contact-info-copy .contact-title:before {
+        display: none !important;
+        content: none !important;
+    }
+
+    #contacto .contact-info {
+        max-width: 460px;
+    }
+
+    #contacto .contact-info p {
+        max-width: 460px;
+        margin: 0 0 22px;
+        color: #1f1f1f !important;
+        font-size: 0.95rem;
+        line-height: 1.75;
+        text-shadow: none !important;
+        font-weight: 400;
+    }
+
+    #contacto .contact-info p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    #contacto .contact-address,
+    #contacto .contact-location {
+        gap: 16px;
+        margin-top: 34px;
+        max-width: 460px;
+    }
+
+    #contacto .contact-location img {
+        margin-top: 2px;
+    }
+
+    #contacto .contact-address span,
+    #contacto .contact-address p,
+    #contacto .contact-address strong,
+    #contacto .contact-address b,
+    #contacto .contact-location span {
+        color: #1f1f1f !important;
+        font-size: 0.88rem;
+        line-height: 1.45;
+        font-weight: 400;
+        text-shadow: none !important;
+    }
+
+    #contacto .contact-icon,
+    #contacto .contact-address i,
+    #contacto .contact-address svg {
+        color: #fc0202;
+        flex: 0 0 auto;
+        margin-top: 2px;
+    }
+
+    #contacto .contact-label,
+    #contacto .contact-text {
+        color: #5f5f5f !important;
+        text-shadow: none !important;
+    }
+
+    #contacto .contact-form,
+    #contacto form {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        justify-self: start;
+        align-self: start;
+        transform: none !important;
+        padding: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    #contacto .contact-input {
+        width: 100%;
+        box-sizing: border-box;
+        height: 48px;
+        padding: 14px 18px;
+        margin-bottom: 0;
+        border: 1px solid #fc0202 !important;
+        border-radius: 0 !important;
+        background: #f7f7f7 !important;
+        box-shadow: none !important;
+        color: #333 !important;
+        font-size: 0.92rem;
+        transition: all 0.3s ease;
+    }
+
+    #contacto .contact-input:focus {
+        background: #fff !important;
+        border-color: #fc0202 !important;
+        color: #333 !important;
+        outline: none;
+        box-shadow: none !important;
+    }
+
+    #contacto .contact-input::placeholder {
+        color: #7a7a7a;
+    }
+
+    #contacto textarea.contact-input {
+        min-height: 115px;
+        height: auto;
+        padding: 14px 18px;
+        margin-bottom: 0;
+        resize: vertical;
+    }
+
+    #contacto .btn-theme {
+        width: 100%;
+        height: 48px;
+        padding: 0 32px;
+        border: none !important;
+        border-radius: 0;
+        background: #fc0202 !important;
+        color: #fff !important;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: none;
+        box-shadow: none !important;
+        transition: all 0.3s ease;
+    }
+
+    #contacto .btn-theme:hover,
+    #contacto .btn-theme:focus {
+        background: #d90101 !important;
+        color: #fff !important;
+        transform: translateY(-1px);
+        box-shadow: none !important;
+    }
+
+    @media (max-width: 991px) {
+        #contacto .contact-section {
+            padding: 90px 0;
+        }
+
+        #contacto .contact-content.contact-container {
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        #contacto .contact-content.contact-container {
+            padding-left: 32px !important;
+            padding-right: 32px !important;
+        }
+
+        #contacto .contact-heading .contact-title.section-title {
+            font-size: 3rem;
+        }
+
+        #contacto .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+    }
+
+    @media (max-width: 575px) {
+        #contacto .contact-content.contact-container {
+            padding-left: 22px !important;
+            padding-right: 22px !important;
+        }
+
+        #contacto .contact-heading .contact-title.section-title {
+            font-size: 2.4rem;
+        }
+    }
 </style>
     </head>
     <!-- END HEAD -->
@@ -2402,38 +2763,27 @@
         <!-- Contacto -->
         <div id="contacto">
             <div class="contact-section">
-                <div class="contact-content content-lg container container-premium">
-                    <div class="row">
-                        <div class="col-sm-4 sm-margin-b-50">
-                            <div class="contact-info-copy">
-                                <h2 class="contact-title section-title">Contáctanos</h2>
-                                <p>¿Buscas un partner confiable en transporte minero?</p>
-                                <p>Somos una servicio seguro, eficiente y alineado a tus requerimientos.</p>
-                                <div class="contact-location">
-                                    <img src="img/lugar_01.png" alt="Ubicación">
-                                    <span>Avenida Argentina Oriente #17, Los Andes.</span>
-                                </div>
+                <div class="contact-content content-lg container container-premium contact-container">
+                    <div class="contact-heading">
+                        <h2 class="contact-title section-title">CONTACTO</h2>
+                    </div>
+                    <div class="contact-grid">
+                        <div class="contact-info contact-info-copy">
+                            <p>¿Buscas un partner confiable en transporte minero?</p>
+                            <p>Somos una servicio seguro, eficiente y alineado a tus requerimientos.</p>
+                            <div class="contact-location contact-address">
+                                <img src="img/lugar_01.png" alt="Ubicación">
+                                <span>Avenida Argentina Oriente #17, Los Andes.</span>
                             </div>
                         </div>
-                        <div class="col-sm-8">
-                            <form action="contact.php" method="post">
-                                <div class="row">
-                                    <div class="col-sm-4">
-                                        <input class="contact-input" type="text" name="nombre" placeholder="Nombre">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input class="contact-input" type="email" name="email" placeholder="Email">
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <input class="contact-input" type="text" name="asunto" placeholder="Asunto">
-                                    </div>
-                                </div>
-                                <textarea class="contact-input" name="mensaje" placeholder="Mensaje"></textarea>
-                                <button class="btn-theme btn-theme-sm btn-default-bg text-uppercase" type="submit">Enviar</button>
-                            </form>
-                        </div>
+                        <form class="contact-form" action="contact.php" method="post">
+                            <input class="contact-input" type="text" name="nombre" placeholder="Nombre">
+                            <input class="contact-input" type="email" name="email" placeholder="Email">
+                            <input class="contact-input" type="text" name="asunto" placeholder="Asunto">
+                            <textarea class="contact-input" name="mensaje" placeholder="Mensaje"></textarea>
+                            <button class="btn-theme btn-theme-sm btn-default-bg" type="submit">Enviar</button>
+                        </form>
                     </div>
-                    <!--// end row -->
                 </div>
             </div>
         </div>
