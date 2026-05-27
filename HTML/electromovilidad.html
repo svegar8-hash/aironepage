@@ -3065,6 +3065,57 @@
             font-size: 2.4rem;
         }
     }
+
+    @media (max-width: 767px) {
+        #electromovilidad-page .electro-stats .row.row-space-2 {
+            display: grid !important;
+            grid-template-columns: 1fr !important;
+            gap: 24px !important;
+            width: 100% !important;
+            padding-left: 22px !important;
+            padding-right: 22px !important;
+            box-sizing: border-box !important;
+        }
+
+        #electromovilidad-page .electro-stats .row.row-space-2 > [class*="col-"] {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        #electromovilidad-page .electro-stats .row.row-space-2 > [class*="col-"] .electro-stat-card {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            min-height: auto !important;
+            height: auto !important;
+            padding: 42px 28px !important;
+            box-sizing: border-box !important;
+            overflow: hidden !important;
+        }
+
+        #electromovilidad-page .electro-stats .electro-card-value {
+            font-size: 1.55rem !important;
+            line-height: 1.15 !important;
+            white-space: normal !important;
+            word-break: normal !important;
+            overflow-wrap: normal !important;
+        }
+
+        #electromovilidad-page .electro-stats .electro-card-text,
+        #electromovilidad-page .electro-stats .transport-card .electro-card-text {
+            font-size: 0.92rem !important;
+            line-height: 1.55 !important;
+            max-width: 280px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            white-space: normal !important;
+            word-break: normal !important;
+            overflow-wrap: normal !important;
+        }
+    }
 </style>
     </head>
     <!-- END HEAD -->
