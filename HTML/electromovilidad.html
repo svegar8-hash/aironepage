@@ -3388,15 +3388,15 @@
         #novedades,
         #contacto,
         #electromovilidad {
-            scroll-margin-top: 65px !important;
+            scroll-margin-top: 0 !important;
         }
     }
 
     @media (max-width: 767px) {
         #contacto,
         #contacto .contact-section {
+            padding-top: 35px !important;
             margin-top: 0 !important;
-            padding-top: 0 !important;
             min-height: auto !important;
         }
 
@@ -3417,7 +3417,37 @@
         #contacto .contact-title.section-title {
             margin-top: 0 !important;
             padding-top: 0 !important;
-            margin-bottom: 30px !important;
+            margin-bottom: 45px !important;
+            line-height: 1 !important;
+        }
+
+        #contacto p,
+        #contacto .contact-info p,
+        #contacto .contact-location span {
+            margin-bottom: 32px !important;
+            line-height: 1.7 !important;
+        }
+
+        #contacto .contact-info,
+        #contacto .contact-address,
+        #contacto .contact-location {
+            margin-bottom: 45px !important;
+        }
+
+        #contacto .contact-form,
+        #contacto form {
+            margin-top: 0 !important;
+        }
+
+        #contacto .contact-form input,
+        #contacto .contact-form textarea,
+        #contacto form .contact-input {
+            margin-bottom: 20px !important;
+        }
+
+        #contacto .contact-form button,
+        #contacto form .btn-theme {
+            margin-top: 10px !important;
         }
     }
 </style>
@@ -3701,6 +3731,62 @@
                     });
                 }
             });
+        </script>
+        <script>
+            (function() {
+                document.querySelectorAll('.nav-item a').forEach(function(link) {
+                    link.addEventListener('click', function(event) {
+                        if (window.innerWidth > 767) {
+                            return;
+                        }
+
+                        var href = this.getAttribute('href') || '';
+                        var hashIndex = href.indexOf('#');
+
+                        if (hashIndex === -1) {
+                            return;
+                        }
+
+                        var path = href.slice(0, hashIndex);
+                        var targetId = href.slice(hashIndex);
+                        var currentPath = window.location.pathname.split('/').pop();
+                        var samePage = !path || path === currentPath || path === window.location.pathname;
+
+                        if (!samePage || !targetId || targetId === '#') {
+                            return;
+                        }
+
+                        var target = document.querySelector(targetId);
+
+                        if (!target) {
+                            return;
+                        }
+
+                        event.preventDefault();
+
+                        var navbarCollapse = document.querySelector('.navbar-collapse');
+
+                        if (navbarCollapse && (navbarCollapse.classList.contains('in') || navbarCollapse.classList.contains('show'))) {
+                            if (window.jQuery && typeof window.jQuery(navbarCollapse).collapse === 'function') {
+                                window.jQuery(navbarCollapse).collapse('hide');
+                            } else {
+                                navbarCollapse.classList.remove('in', 'show');
+                                navbarCollapse.style.height = '';
+                            }
+                        }
+
+                        setTimeout(function() {
+                            var offset = 70;
+                            var targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }, 350);
+                    });
+                });
+            })();
         </script>
         <script>
             (function() {
