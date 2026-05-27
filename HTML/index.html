@@ -2626,20 +2626,64 @@
             width: 100% !important;
             display: block !important;
             margin: 0 !important;
-        }
-
-        .header .nav-item-child {
-            display: block !important;
-            width: 100% !important;
-            min-height: auto !important;
-            padding: 8px 0 !important;
             text-align: left !important;
         }
 
+        .header .nav-item-child {
+            display: inline-block !important;
+            width: auto !important;
+            min-height: auto !important;
+            padding: 8px 0 !important;
+            text-align: left !important;
+            color: #4c5570 !important;
+            text-decoration: none !important;
+            opacity: 1 !important;
+            transition: all .25s ease !important;
+        }
+
         .header .nav-item:not(.nav-item-cta) .nav-item-hover:after {
-            bottom: 2px !important;
-            left: 0 !important;
-            transform: none !important;
+            content: "" !important;
+            top: auto !important;
+            left: 50% !important;
+            bottom: -6px !important;
+            width: 0 !important;
+            height: 2px !important;
+            background: #fc0202 !important;
+            border-radius: 20px !important;
+            transform: translateX(-50%) !important;
+            transition: width .25s ease !important;
+        }
+
+        .header .nav-collapse,
+        .header .navbar-collapse,
+        .header .nav-collapse *,
+        .header .navbar-collapse * {
+            border-top: none !important;
+            border-bottom: none !important;
+            box-shadow: none !important;
+        }
+
+        .header .nav-collapse hr,
+        .header .navbar-collapse hr,
+        .header .nav-collapse:before,
+        .header .nav-collapse:after,
+        .header .navbar-collapse:before,
+        .header .navbar-collapse:after {
+            display: none !important;
+            content: none !important;
+        }
+
+        .header .nav-item:not(.nav-item-cta) .nav-item-child:hover,
+        .header .nav-item:not(.nav-item-cta) .nav-item-child:focus,
+        .header .nav-item:not(.nav-item-cta).active .nav-item-child {
+            color: #4c5570 !important;
+            opacity: 1 !important;
+        }
+
+        .header .nav-item:not(.nav-item-cta):hover .nav-item-hover:after,
+        .header .nav-item:not(.nav-item-cta):focus-within .nav-item-hover:after,
+        .header .nav-item:not(.nav-item-cta).active .nav-item-hover:after {
+            width: 100% !important;
         }
 
         .header .nav-item.nav-item-cta {
