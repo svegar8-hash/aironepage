@@ -2383,10 +2383,11 @@
         width: 100%;
         max-width: 720px;
         margin: 0 !important;
-        margin-top: 115px;
+        margin-top: -126px !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
         justify-self: start;
+        align-self: flex-start !important;
         transform: none !important;
         padding: 0 !important;
         padding-left: 0 !important;
@@ -2493,6 +2494,15 @@
 
         #contacto .contact-heading .contact-title.section-title {
             font-size: 2.4rem;
+        }
+    }
+
+    @media (max-width: 767px) {
+        #contacto .contact-form,
+        #contacto form {
+            margin-top: 40px !important;
+            padding-top: 0 !important;
+            align-self: flex-start !important;
         }
     }
 
